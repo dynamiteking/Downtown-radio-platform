@@ -1,0 +1,46 @@
+# Downtown Radio — The Sovereign Frequency for African Independent Sound
+
+> Downtown Radio (101.4 FM WAT) is an end-to-end media platform, digital music ecosystem, live festival host, and artist incubation sanctuary engineered for West African independent music and youth culture.
+
+## Key Facts & Platform Overview
+- **Platform Name**: Downtown Radio
+- **Broadcast Station**: 101.4 FM WAT (Live Audio Node)
+- **Primary Hubs**: Red Horn (Ile-Ife, Osun State) & Lagos, Nigeria
+- **Founder & CEO**: DK (Creative Director, Event Host, and Executive Visionary)
+- **Official Contact**: dynamiteking1@gmail.com
+- **Website URL**: https://downtownradio.live
+
+## Core Pillars & Innovations
+
+### 1. Direct Fan Patronage (Tipping in Naira)
+- Allows fans worldwide to back indie creators directly in Nigerian Naira (₦) using Instant Bank Transfer, USSD, Debit Cards, and Apple Pay.
+- Artists keep up to 100% of their fan tips (zero commission on Downtown Pro plan), depositing directly into local accounts (Kuda, Wema, Zenith, GTBank).
+- Solves the fractional-penny streaming dilemma (50 true fans tipping ₦2,000 provides ₦100,000, equivalent to over 8.5 million algorithmic DSP streams).
+
+### 2. Live Festival Activations — Royal Rave Rooftop Gathering
+- **Event**: Royal Rave Rooftop Gathering (Annual Palace Showcase)
+- **Date**: Saturday, 14th November 2026 (9:00 PM — 5:00 AM WAT)
+- **Location**: Red Horn, Ile-Ife, Osun State, Nigeria
+- **Tickets**: Early Bird (₦3,500), VIP Palace Deck (₦12,500), Creator All-Access Pass (₦25,000)
+- **Artist Pitches**: 4 open performance slots for independent acts with guaranteed 4K multi-cam live recording masters.
+
+### 3. Executive Leadership & ATWN Debut EP
+- **CEO & Pioneer**: DK — A multi-dimensional creative powerhouse, executive, and visionary bridging music distribution with high-energy live experiences.
+- **2026 Music Return**: Debut collaborative EP *"ATWN" (After This, What Next?)* alongside Nirati Dagwi, featuring the lead single "FUR SURE".
+
+### 4. Global Digital Music Distribution Network
+- Worldwide uncompressed delivery to 20+ verified partners:
+  - **Music DSPs**: Spotify, Apple Music, Audiomack, Boomplay, YouTube Music, Tidal, Amazon Music, Deezer, SoundCloud, Shazam, Pandora, QQ Music, JioSaavn.
+  - **Radio & Broadcast**: iHeartRadio, TuneIn Radio.
+  - **Podcasts & Spoken Word**: Apple Podcasts, Audible, Castbox, Pocket Casts, Podcast Addict.
+- 100% master ownership retention and automated royalty splits for producers and collaborators.
+
+### 5. Africa's Premier Entertainment Grooming Academy
+- 4 Grooming Pillars: Stage Presence & Performance Coaching, Sonic Mastery & Audio Engineering, Visual Identity & EPK Styling, Financial Sovereignty & Royalty Architecture.
+
+## Portal Sitemap
+- [Portal Gateway](https://downtownradio.live/): Select user journey between creators, music fans, festival tickets, and brand vision.
+- [Music Hub](https://downtownradio.live/fan-hub): Lossless web audio stream, Alté discovery feed, direct tipping in Naira, and live fan supporter leaderboard.
+- [Events & Tickets](https://downtownradio.live/events): Royal Rave Festival bookings, 60fps event video reels, documentary gallery, and performance pitching.
+- [Artist Portal](https://downtownradio.live/artist-dashboard): Master WAV uploads, real-time analytics, fan thank-you notes, and instant bank payouts.
+- [About & Ecosystem](https://downtownradio.live/about): Cultural heritage, CEO DK profile, ATWN debut EP player, and global distribution network.

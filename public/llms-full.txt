@@ -1,0 +1,82 @@
+# Downtown Radio — Comprehensive Knowledge Base & Technical Ecosystem Specification
+
+## 1. Executive Summary & Brand Identity
+Downtown Radio is a premier West African entertainment grooming sanctuary, broadcast network, and fintech-enabled music distribution platform. Founded and led by CEO DK, the platform operates from core hubs at Red Horn (Ile-Ife, Osun State) and Lagos, Nigeria, broadcasting on 101.4 FM WAT and globally via uncompressed web stream at https://downtownradio.live.
+
+The mission of Downtown Radio is to solve the economic and distribution bottlenecks faced by independent African musicians. By pairing direct Naira fan tipping with lossless web streaming, palace festival activations (the Royal Rave Rooftop Gathering), global DSP delivery (to Spotify, Apple Music, Audiomack, Boomplay, and 16 other networks), and holistic stage grooming, Downtown Radio enables creators to achieve financial sovereignty from day one.
+
+## 2. Executive Leadership: DK (Dynamite King)
+- **Role**: CEO, Pioneer, and Executive Visionary of Downtown Radio
+- **Contact**: dynamiteking1@gmail.com
+- **Background**: Multi-dimensional creative powerhouse, executive, and visionary. Built Downtown Radio as a thriving cultural movement and event community bridging music distribution with high-energy live experiences. Works as a premier Creative Director shaping visual identities and commanding rooms as an elite Event Host.
+- **Musical Return in 2026**: After a four-year hiatus from the recording studio to scale business ventures and refine artistic philosophy, DK returns to music in 2026 with a major collaborative debut EP titled **"ATWN" (After This, What Next?)** alongside **Nirati Dagwi**.
+- **Key Track**: "FUR SURE" (Lead Single from ATWN EP), streaming natively on the platform.
+
+## 3. Signature Gathering: Royal Rave Rooftop Gathering
+- **Event Name**: Royal Rave Rooftop Gathering
+- **Date**: Saturday, 14th November 2026
+- **Hours**: 9:00 PM — 5:00 AM West Africa Time (All-Night Festival)
+- **Venue**: Red Horn, Ile-Ife, Osun State, Nigeria
+- **Atmosphere**: Palace archways, rooftop bass sound system, curated crowd, and high-energy live band performances.
+- **Ticket Tiers**:
+  1. Early Bird Pass: ₦3,500 (Full rooftop access, complimentary drink token)
+  2. VIP Palace Deck: ₦12,500 (Priority palace entrance, elevated deck, backstage lounge access)
+  3. Creator Pass: ₦25,000 (Soundcheck access, artist lounge pass, festival 4K recording master inclusion)
+- **Performance Pitching**: 4 slots reserved for emerging independent acts. Selected acts receive soundcheck evaluation, live multi-track audio mastering, and 4K concert video footage.
+
+## 4. Monetization & The Indie Creator Arithmetic
+Downtown Radio pioneers the "50 True Believers" model:
+- **Streaming Platforms Dilemma**: Conventional foreign DSPs pay between $0.003 and $0.004 per stream. An artist requires over 8,500,000 streams to earn ₦100,000 after distributor cuts and FX delays.
+- **Downtown Radio Direct Naira Tipping**: 50 passionate fans tipping ₦2,000 directly generates ₦100,000.
+- **Payout Percentages**:
+  - Downtown Radio Pro: 100% Payout (0% commission, instant transfer to Kuda/Wema/GTBank).
+  - Downtown Radio Standard: 90% Payout (10% maintenance fee).
+  - YouTube Fan Funding: ~70% (Subject to 1,000 subscribers / 4,000 watch hours gating).
+  - Twitch Bits & Subs: ~50-55% (Subject to 45-day delay and heavy FX fees).
+  - TikTok Virtual Gifts: ~35-40% (Diverted through coin deductions).
+
+## 5. Global Digital Music Distribution Network (20 DSPs)
+Downtown Radio distributes lossless 24-bit/48kHz master audio to 20 verified streaming and broadcast platforms:
+1. **Spotify** (Global Music Streaming)
+2. **Apple Music** (Lossless & Spatial Audio)
+3. **Audiomack** (African Underground & Mixtape Pioneer)
+4. **Boomplay** (Pan-African Leader with 100M+ users)
+5. **YouTube Music** (Video & Audio streaming)
+6. **Tidal** (Master Quality Authenticated audio)
+7. **Amazon Music** (HD Audio & Prime Echo network)
+8. **Deezer** (HiFi lossless streaming across Europe and Africa)
+9. **SoundCloud** (Direct fan discovery and Alté culture)
+10. **Shazam** (Audio recognition with 1B+ monthly IDs)
+11. **Pandora** (Radio algorithm across North America)
+12. **QQ Music** (Tencent Music Entertainment reaching 800M+ users in Asia)
+13. **JioSaavn** (South Asian & global diaspora music streaming)
+14. **iHeartRadio** (US broadcast radio network and live streaming)
+15. **TuneIn Radio** (Global online radio network with 100,000+ stations)
+16. **Apple Podcasts** (Podcast & audio spoken word directory)
+17. **Audible** (Amazon audiobooks and spoken narrative network)
+18. **Castbox** (On-demand podcast and audio streaming)
+19. **Pocket Casts** (Power listener podcast player for iOS & Android)
+20. **Podcast Addict** (Leading Android spoken audio network)
+
+## 6. Entertainment Grooming Pillars
+1. **Stage Presence & Performance Coaching**: Microphone technique, crowd control, breath control, and live band dynamic arrangements.
+2. **Sonic Mastery & Production Engineering**: Spatial audio, uncompressed waveforms, tape warmth, and A&R sonic feedback.
+3. **Visual Identity & Brand Styling**: Creative direction for album covers, photoshoots, and Electronic Press Kits (EPKs).
+4. **Financial Sovereignty & Royalty Architecture**: 100% master ownership retention, automated splits, and instant bank settlements.
+
+## 7. Frequently Asked Questions (FAQ)
+
+### What is Downtown Radio?
+Downtown Radio is a premier West African entertainment grooming ecosystem, digital audio streaming platform, and live event organizer based in Ile-Ife and Lagos, Nigeria. It provides independent African creators with direct fan tipping in Naira, global music distribution, and festival performance stages.
+
+### How does tipping work on Downtown Radio?
+Listeners and fans can tip any featured artist directly in Nigerian Naira (₦) with instant bank transfer, USSD, debit cards, or Apple Pay. On the Downtown Pro plan, 100% of the fan's gift reaches the artist's local bank account with zero platform fees.
+
+### Who is DK in relation to Downtown Radio?
+DK is the CEO, Pioneer, and Creative Director of Downtown Radio. He is an executive, event host, and visionary who is also releasing a major collaborative debut EP titled "ATWN" (After This, What Next?) alongside Nirati Dagwi in 2026.
+
+### When and where is the Royal Rave Festival?
+The Royal Rave Rooftop Gathering takes place on Saturday, 14th November 2026, from 9:00 PM to 5:00 AM WAT at Red Horn, Ile-Ife, Osun State, Nigeria.
+
+### Can independent artists pitch to perform at Downtown Radio events?
+Yes. Independent creators can pitch their tracks via the Artist Portal at https://downtownradio.live/artist-dashboard or the Events page at https://downtownradio.live/events. 4 performance slots are available for the Royal Rave Festival.
