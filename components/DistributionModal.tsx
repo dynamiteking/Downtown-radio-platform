@@ -49,11 +49,15 @@ export default function DistributionModal() {
     { name: 'SoundCloud', logo: '/images/dsp/soundcloud.png' },
     { name: 'Shazam', logo: '/images/dsp/shazam.png' },
     { name: 'Pandora', logo: '/images/dsp/pandora.png' },
-    { name: 'iHeartRadio', logo: '/images/dsp/iheart-radio.png' },
     { name: 'QQ Music', logo: '/images/dsp/qq-music.png' },
     { name: 'JioSaavn', logo: '/images/dsp/jio-saavn.png' },
+    { name: 'iHeartRadio', logo: '/images/dsp/iheart-radio.png' },
     { name: 'TuneIn Radio', logo: '/images/dsp/tunein-radio.png' },
     { name: 'Apple Podcasts', logo: '/images/dsp/apple-podcasts.png' },
+    { name: 'Audible', logo: '/images/dsp/audible.png' },
+    { name: 'Castbox', logo: '/images/dsp/castbox.png' },
+    { name: 'Pocket Casts', logo: '/images/dsp/pocket-casts.png' },
+    { name: 'Podcast Addict', logo: '/images/dsp/podcast-addict.png' },
   ];
 
   const toggleStore = (storeName: string) => {

@@ -45,13 +45,13 @@ export default function ProofPointComparison() {
       note: 'Fractional penny per stream; requires millions of plays to earn a living',
     },
     {
-      name: 'Twitch Subscriptions & Bits',
-      logo: '/images/dsp/tunein-radio.png',
-      percentage: 50,
+      name: 'SoundCloud Premier & Creator Monetization',
+      logo: '/images/dsp/soundcloud.png',
+      percentage: 55,
       highlight: false,
       color: 'bg-zinc-700',
-      badge: '50%',
-      note: 'Heavy FX conversion fees, 45-day delay on local payouts',
+      badge: '55% Payout',
+      note: 'Regional tier gating, ad thresholds, and delayed foreign currency settlements',
     },
   ];
 
@@ -78,7 +78,7 @@ export default function ProofPointComparison() {
           </p>
 
           {/* THE WORKED EXAMPLE BOX */}
-          <div className="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-gold-glow">
+          <div className="p-5 sm:p-6 rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-gold-glow w-full">
             <div className="flex items-start space-x-3">
               <div className="p-2.5 rounded-xl bg-gold-500/20 text-gold-400 flex-shrink-0 mt-0.5">
                 <Banknote className="w-5 h-5" />
@@ -97,13 +97,13 @@ export default function ProofPointComparison() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 pt-2">
+          <div className="flex items-center gap-4 pt-2 w-full">
             <button
               onClick={() => {
                 setActiveTab('pro');
                 setProModalOpen(true);
               }}
-              className="px-6 py-3.5 rounded-2xl font-bold text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center gap-2"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-2xl font-bold text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center justify-center gap-2"
             >
               <span>Keep 100% of Every Tip (Pro Tier)</span>
               <ArrowRight className="w-4 h-4 text-charcoal-950" />
@@ -112,8 +112,8 @@ export default function ProofPointComparison() {
         </div>
 
         {/* RIGHT COLUMN: Interactive Comparison Bars */}
-        <div className="lg:col-span-6">
-          <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal-850 border border-white/10 shadow-2xl space-y-6">
+        <div className="lg:col-span-6 w-full">
+          <div className="p-5 sm:p-8 rounded-3xl bg-charcoal-850 border border-white/10 shadow-2xl space-y-6 w-full">
             
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div>

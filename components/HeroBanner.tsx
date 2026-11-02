@@ -110,36 +110,36 @@ export default function HeroBanner() {
       <div className="absolute -bottom-24 right-0 w-96 h-96 bg-gold-600/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Slide Content */}
-      <div className="relative z-10 px-4 py-8 sm:px-12 sm:py-16 max-w-4xl">
+      <div className="relative z-10 px-5 py-10 sm:px-12 sm:py-16 max-w-4xl w-full">
         
         {/* Top Tag / Pill */}
-        <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-charcoal-800/90 border border-gold-500/40 text-[11px] sm:text-xs font-bold text-gold-400 tracking-wider shadow-gold-glow mb-4 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-charcoal-800/90 border border-gold-500/40 text-xs font-bold text-gold-400 tracking-wider shadow-gold-glow mb-4 backdrop-blur-md">
           {slide.badgeIcon}
           <span>{slide.badge}</span>
         </div>
 
         {/* Title */}
-        <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-2">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-2">
           {slide.title}
         </h1>
 
         {/* Artist / Subtitle */}
-        <p className="text-base sm:text-xl font-semibold text-gold-400/95 mb-3 flex items-center gap-2 flex-wrap">
+        <p className="text-lg sm:text-xl font-semibold text-gold-400/95 mb-3 flex items-center gap-2 flex-wrap">
           <span>{slide.artist}</span>
           <span className="w-1.5 h-1.5 rounded-full bg-gold-500 hidden sm:inline" />
-          <span className="text-xs sm:text-sm font-normal text-zinc-400">{slide.tag}</span>
+          <span className="text-sm font-normal text-zinc-400">{slide.tag}</span>
         </p>
 
-        <p className="text-xs sm:text-base text-zinc-300 max-w-2xl mb-6 sm:mb-8 leading-relaxed font-normal">
+        <p className="text-sm sm:text-base text-zinc-300 max-w-2xl mb-6 sm:mb-8 leading-relaxed font-normal">
           {slide.subtitle}
         </p>
 
         {/* Dynamic Metric Pill Row */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-6 max-w-lg mb-6 sm:mb-8 p-2.5 sm:p-3 rounded-2xl bg-charcoal-800/50 border border-white/5 backdrop-blur-md">
+        <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mb-6 sm:mb-8 p-3 rounded-2xl bg-charcoal-800/50 border border-white/5 backdrop-blur-md w-full">
           {slide.stats.map((s, idx) => (
             <div key={idx} className="text-left">
-              <div className="text-[10px] sm:text-[11px] font-medium text-zinc-400 uppercase tracking-wider">{s.label}</div>
-              <div className="text-xs sm:text-lg font-bold text-white tracking-wide truncate">{s.value}</div>
+              <div className="text-[11px] font-medium text-zinc-400 uppercase tracking-wider">{s.label}</div>
+              <div className="text-sm sm:text-lg font-bold text-white tracking-wide truncate">{s.value}</div>
             </div>
           ))}
         </div>
@@ -264,6 +264,50 @@ export default function HeroBanner() {
             </span>
             <span className="text-[9px] text-zinc-400">
               9:00 PM — 5:00 AM WAT
+            </span>
+          </div>
+        </div>
+      )}
+
+      {/* Floating 20-DSP Showcase Card for Distribution Slide (Large Screen) */}
+      {slide.actionType === 'distribution' && (
+        <div 
+          onClick={() => setActiveTab('distribution')}
+          className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 z-20 w-80 rounded-3xl p-5 border-2 border-gold-500/50 shadow-gold-glow-lg bg-charcoal-900/95 backdrop-blur-xl transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer"
+        >
+          <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-white/10">
+            <span className="text-[11px] font-black uppercase tracking-wider text-gold-400">
+              Verified DSP Network
+            </span>
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-gold-500/20 text-gold-300 border border-gold-500/30 font-bold">
+              20 Platforms
+            </span>
+          </div>
+
+          <div className="grid grid-cols-5 gap-2 mb-3">
+            {[
+              'yt-music', 'shazam', 'apple-music', 'amazon-music', 'spotify',
+              'iheart-radio', 'qq-music', 'soundcloud', 'deezer', 'jio-saavn',
+              'audiomack', 'apple-podcasts', 'castbox', 'podcast-addict', 'audible',
+              'tidal', 'boomplay', 'pandora', 'tunein-radio', 'pocket-casts'
+            ].map(id => (
+              <div 
+                key={id} 
+                className="w-11 h-11 rounded-full p-1 bg-charcoal-800/90 border border-white/10 flex items-center justify-center hover:border-gold-400 hover:scale-110 transition-all shadow-sm"
+              >
+                <img 
+                  src={`/images/dsp/${id}.png`} 
+                  alt={id} 
+                  className="w-full h-full object-contain" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="p-2 rounded-xl bg-charcoal-950/80 border border-white/5 text-center">
+            <span className="text-[10px] font-mono text-zinc-300">
+              100% Royalties Kept • 48-72h Worldwide Delivery
             </span>
           </div>
         </div>

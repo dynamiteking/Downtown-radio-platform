@@ -91,17 +91,17 @@ export default function TrackFeed() {
           return (
             <div
               key={track.id}
-              className={`group relative bg-charcoal-850/90 rounded-2xl border transition-all duration-300 p-4 sm:p-5 flex flex-col justify-between hover:shadow-gold-glow ${
+              className={`group relative bg-charcoal-850/90 rounded-2xl border transition-all duration-300 p-5 flex flex-col justify-between hover:shadow-gold-glow w-full ${
                 isThisTrackPlaying
                   ? 'border-gold-500/60 ring-1 ring-gold-500/30'
                   : 'border-white/5 hover:border-gold-500/40'
               }`}
             >
               {/* Top Row: Cover, Info & Play */}
-              <div className="flex items-start space-x-3 sm:space-x-4 mb-4">
+              <div className="flex items-start space-x-3.5 sm:space-x-4 mb-4">
                 
                 {/* Cover art with Play button */}
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0 bg-charcoal-800 border border-white/10">
+                <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0 bg-charcoal-800 border border-white/10">
                   <img
                     src={track.coverUrl}
                     alt={track.title}

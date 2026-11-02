@@ -37,7 +37,7 @@ export default function Leaderboard() {
   };
 
   return (
-    <div className="bg-charcoal-850/90 rounded-3xl border border-white/5 p-6 sm:p-7 shadow-xl">
+    <div className="bg-charcoal-850/90 rounded-3xl border border-white/5 p-5 sm:p-7 shadow-xl w-full overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between pb-5 border-b border-white/5">
         <div>
@@ -66,7 +66,7 @@ export default function Leaderboard() {
         {leaderboard.slice(0, 5).map(fan => (
           <div
             key={fan.id}
-            className="py-3.5 flex items-center justify-between group hover:bg-white/[0.02] -mx-2 px-2 rounded-xl transition-colors"
+            className="py-3 flex items-center justify-between group hover:bg-white/[0.02] px-2 rounded-xl transition-colors"
           >
             {/* Left: Rank & Avatar & Name */}
             <div className="flex items-center space-x-3.5">

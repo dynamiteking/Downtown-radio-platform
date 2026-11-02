@@ -99,42 +99,83 @@ export default function DistributionHub() {
       <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-4 sm:p-8 lg:p-12 shadow-2xl">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
         
-        <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/15 text-[11px] sm:text-xs font-extrabold text-gold-400 tracking-wider mb-4 border border-gold-500/30">
-            <Share2 className="w-3.5 h-3.5" />
-            <span>GLOBAL MUSIC DISTRIBUTION NETWORK</span>
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/15 text-[11px] sm:text-xs font-extrabold text-gold-400 tracking-wider mb-4 border border-gold-500/30">
+              <Share2 className="w-3.5 h-3.5" />
+              <span>GLOBAL MUSIC DISTRIBUTION NETWORK</span>
+            </div>
+
+            <h1 className="text-2xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+              Release Your Music Everywhere. <br />
+              <span className="text-transparent bg-clip-text bg-gold-gradient">
+                Keep 100% of Your Masters.
+              </span>
+            </h1>
+
+            <p className="text-xs sm:text-base text-zinc-300 leading-relaxed mb-6 sm:mb-8">
+              Distribute your singles, EPs, and albums to Spotify, Apple Music, Audiomack, Boomplay, and 150+ digital streaming platforms worldwide with automated royalty splits in Nigerian Naira and US Dollars.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <button
+                onClick={() => setDistributionModalOpen(true)}
+                className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform active:scale-95 flex items-center gap-2"
+              >
+                <Sparkles className="w-4 h-4 text-charcoal-950" />
+                <span>Submit Master for Distribution</span>
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </button>
+
+              <button
+                onClick={() => {
+                  setActiveTab('pro');
+                  setProModalOpen(true);
+                }}
+                className="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm text-gold-400 bg-charcoal-800/90 border border-gold-500/40 hover:border-gold-500 transition-all flex items-center gap-2"
+              >
+                <span>Explore Downtown Pro Plan</span>
+              </button>
+            </div>
           </div>
 
-          <h1 className="text-2xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
-            Release Your Music Everywhere. <br />
-            <span className="text-transparent bg-clip-text bg-gold-gradient">
-              Keep 100% of Your Masters.
-            </span>
-          </h1>
+          {/* Right Column: 20 Official DSP Logos Showcase */}
+          <div className="lg:col-span-5 bg-charcoal-900/90 border border-gold-500/30 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-gold-glow/20">
+            <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/10">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold-400">
+                Official Delivery Nodes
+              </span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
+                20 DSP Channels
+              </span>
+            </div>
 
-          <p className="text-xs sm:text-base text-zinc-300 leading-relaxed mb-6 sm:mb-8">
-            Distribute your singles, EPs, and albums to Spotify, Apple Music, Audiomack, Boomplay, and 150+ digital streaming platforms worldwide with automated royalty splits in Nigerian Naira and US Dollars.
-          </p>
+            <div className="grid grid-cols-5 gap-2">
+              {ALL_PLATFORMS.map(p => (
+                <div
+                  key={p.id}
+                  className="group/logo relative flex flex-col items-center justify-center p-1.5 rounded-xl bg-charcoal-800/60 border border-white/5 hover:border-gold-400 hover:scale-105 transition-all"
+                  title={`${p.name} - ${p.categoryLabel}`}
+                >
+                  <div className="w-9 h-9 rounded-full overflow-hidden bg-charcoal-900 border border-white/10 p-0.5 flex items-center justify-center">
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-[8px] text-zinc-400 truncate w-full text-center mt-1 group-hover/logo:text-gold-400">
+                    {p.name}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-            <button
-              onClick={() => setDistributionModalOpen(true)}
-              className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform active:scale-95 flex items-center gap-2"
-            >
-              <Sparkles className="w-4 h-4 text-charcoal-950" />
-              <span>Submit Master for Distribution</span>
-              <ArrowRight className="w-4 h-4 ml-1" />
-            </button>
-
-            <button
-              onClick={() => {
-                setActiveTab('pro');
-                setProModalOpen(true);
-              }}
-              className="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm text-gold-400 bg-charcoal-800/90 border border-gold-500/40 hover:border-gold-500 transition-all flex items-center gap-2"
-            >
-              <span>Explore Downtown Pro Plan</span>
-            </button>
+            <div className="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[10px] text-zinc-400 font-mono">
+              <span className="text-gold-400 font-bold">⚡ Zero Catalog Gating</span>
+              <span>ISRC & UPC Assigned</span>
+            </div>
           </div>
         </div>
       </div>

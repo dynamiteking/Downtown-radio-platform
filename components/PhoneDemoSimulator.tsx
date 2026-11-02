@@ -72,12 +72,12 @@ export default function PhoneDemoSimulator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto items-center">
         
         {/* PHONE 1: ARTIST TERMINAL */}
-        <div className="flex flex-col items-center">
-          <div className="w-full max-w-[310px] xs:max-w-[340px] sm:max-w-sm rounded-[32px] sm:rounded-[40px] bg-charcoal-950 p-3 sm:p-4 border-2 sm:border-4 border-charcoal-800 shadow-[0_25px_60px_rgba(0,0,0,0.9)] relative overflow-hidden">
+        <div className="flex flex-col items-center w-full">
+          <div className="w-full max-w-md rounded-3xl sm:rounded-[40px] bg-charcoal-950 p-3.5 sm:p-4 border-2 sm:border-4 border-charcoal-800 shadow-[0_25px_60px_rgba(0,0,0,0.9)] relative overflow-hidden">
             {/* Camera island */}
-            <div className="w-24 sm:w-32 h-3.5 sm:h-4 bg-charcoal-900 rounded-full mx-auto mb-3 sm:mb-4" />
+            <div className="w-28 sm:w-32 h-3.5 sm:h-4 bg-charcoal-900 rounded-full mx-auto mb-3 sm:mb-4" />
 
-            <div className="bg-charcoal-900 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border border-white/5 space-y-4">
+            <div className="bg-charcoal-900 rounded-2xl sm:rounded-3xl p-4 sm:p-5 border border-white/5 space-y-4">
               
               {/* Creator Top Bar */}
               <div className="flex items-center justify-between text-xs text-zinc-400 font-semibold border-b border-white/5 pb-3">
@@ -160,12 +160,12 @@ export default function PhoneDemoSimulator() {
         </div>
 
         {/* PHONE 2: FAN PATRONAGE DOCK */}
-        <div className="flex flex-col items-center">
-          <div className="w-full max-w-[310px] xs:max-w-[340px] sm:max-w-sm rounded-[32px] sm:rounded-[40px] bg-charcoal-950 p-3 sm:p-4 border-2 sm:border-4 border-gold-500/40 shadow-gold-glow-lg relative overflow-hidden">
+        <div className="flex flex-col items-center w-full">
+          <div className="w-full max-w-md rounded-3xl sm:rounded-[40px] bg-charcoal-950 p-3.5 sm:p-4 border-2 sm:border-4 border-gold-500/40 shadow-gold-glow-lg relative overflow-hidden">
             {/* Camera island */}
-            <div className="w-24 sm:w-32 h-3.5 sm:h-4 bg-charcoal-900 rounded-full mx-auto mb-3 sm:mb-4" />
+            <div className="w-28 sm:w-32 h-3.5 sm:h-4 bg-charcoal-900 rounded-full mx-auto mb-3 sm:mb-4" />
 
-            <div className="bg-[#0F1217] text-zinc-100 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border border-gold-500/30 space-y-4">
+            <div className="bg-[#0F1217] text-zinc-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 border border-gold-500/30 space-y-4">
               
               {/* Sheet Drag Handle */}
               <div className="w-12 h-1 bg-zinc-700 rounded-full mx-auto" />

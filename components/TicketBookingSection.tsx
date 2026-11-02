@@ -323,7 +323,7 @@ export default function TicketBookingSection() {
             </div>
           ) : (
             /* TICKET PURCHASE FORM */
-            <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-2xl space-y-6">
+            <div className="p-5 sm:p-8 rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-2xl space-y-6 w-full">
               
               <div>
                 <h3 className="text-xl sm:text-2xl font-black text-white">
@@ -335,14 +335,14 @@ export default function TicketBookingSection() {
               </div>
 
               {/* Tier Cards Selector */}
-              <div className="space-y-3">
+              <div className="space-y-3 w-full">
                 {TICKET_TIERS.map(tier => {
                   const isSelected = selectedTier.id === tier.id;
                   return (
                     <div
                       key={tier.id}
                       onClick={() => setSelectedTier(tier)}
-                      className={`p-3.5 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer relative ${
+                      className={`p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer relative w-full ${
                         isSelected
                           ? 'bg-charcoal-900 border-gold-500 shadow-gold-glow'
                           : 'bg-charcoal-900/60 border-white/5 hover:border-white/20'

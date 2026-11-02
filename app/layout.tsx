@@ -21,7 +21,8 @@ export const viewport: Viewport = {
   themeColor: '#FF9F1C',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export const metadata: Metadata = {
@@ -127,7 +128,7 @@ export default function RootLayout({
         <StructuredData />
         <link rel="author" href="/llms.txt" />
       </head>
-      <body className="bg-charcoal-900 text-zinc-100 min-h-screen flex flex-col selection:bg-gold-500 selection:text-charcoal-950">
+      <body className="bg-charcoal-900 text-zinc-100 min-h-screen flex flex-col selection:bg-gold-500 selection:text-charcoal-950 w-full max-w-full overflow-x-hidden relative">
         <StoreProvider>
           <AudioProvider>
             {/* Global Header */}
@@ -140,7 +141,7 @@ export default function RootLayout({
             <NotificationToast />
 
             {/* Main Application Body with Bottom Safe Area for Floating Player */}
-            <main className="flex-1 pb-28 sm:pb-36">
+            <main className="flex-1 pb-28 sm:pb-36 w-full max-w-full overflow-x-hidden">
               {children}
             </main>
 

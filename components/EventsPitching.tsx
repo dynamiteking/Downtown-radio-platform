@@ -72,7 +72,7 @@ export default function EventsPitching() {
           return (
             <div
               key={event.id}
-              className="group relative bg-charcoal-850/95 rounded-2xl sm:rounded-3xl border border-white/5 hover:border-gold-500/40 overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between"
+              className="group relative bg-charcoal-850/95 rounded-3xl border border-white/5 hover:border-gold-500/40 overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between w-full"
             >
               {/* Event Image Banner */}
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-charcoal-800">
@@ -108,7 +108,7 @@ export default function EventsPitching() {
               </div>
 
               {/* Event Body Info */}
-              <div className="p-4 sm:p-7 space-y-4 sm:space-y-5 flex-1 flex flex-col justify-between">
+              <div className="p-5 sm:p-7 space-y-4 sm:space-y-5 flex-1 flex flex-col justify-between w-full">
                 
                 <div>
                   <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-300 font-medium pb-4 border-b border-white/5">

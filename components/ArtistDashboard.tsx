@@ -72,34 +72,34 @@ export default function ArtistDashboard() {
     <div className="space-y-8 my-8">
       
       {/* ARTIST HERO PROFILE BANNER */}
-      <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-4 sm:p-8 shadow-2xl">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-5 sm:p-8 shadow-2xl w-full">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-5">
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6 w-full">
+          <div className="flex flex-row items-center space-x-4 sm:space-x-5">
             <div className="relative flex-shrink-0">
               <img
                 src={currentArtist.avatarUrl}
                 alt={currentArtist.stageName}
-                className="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-500/40 shadow-gold-glow"
+                className="w-18 h-18 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-500/40 shadow-gold-glow"
               />
               {currentArtist.isPro && (
                 <span className="absolute -bottom-2 -right-2 p-1.5 rounded-xl bg-gold-gradient text-charcoal-950 font-black shadow-gold-glow">
-                  <Crown className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-charcoal-950" />
+                  <Crown className="w-4 h-4 fill-charcoal-950" />
                 </span>
               )}
             </div>
 
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <h1 className="text-xl sm:text-4xl font-black text-white tracking-tight">
+                <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight truncate">
                   {currentArtist.stageName}
                 </h1>
                 {currentArtist.verified && (
-                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400" />
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
                 )}
                 {currentArtist.isPro && (
-                  <span className="px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-gold-500/20 text-gold-300 border border-gold-500/30">
+                  <span className="px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-gold-500/20 text-gold-300 border border-gold-500/30 flex-shrink-0">
                     PRO ARTIST
                   </span>
                 )}
