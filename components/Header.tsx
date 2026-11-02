@@ -54,25 +54,25 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-charcoal-900/90 backdrop-blur-xl border-b border-white/5 transition-all shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
           
           {/* ZONE 1: BRAND IDENTITY (LEFT) */}
           <div className="flex items-center flex-shrink-0">
             <Link 
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center space-x-3 group focus:outline-none text-left"
+              className="flex items-center space-x-2 sm:space-x-3 group focus:outline-none text-left"
             >
               {/* Official Downtown Radio Logo */}
-              <div className="relative w-11 h-11 rounded-2xl overflow-hidden border-2 border-gold-500 shadow-gold-glow group-hover:scale-105 group-hover:shadow-gold-glow-lg transition-all duration-300 bg-gold-500 flex-shrink-0">
+              <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-gold-500 shadow-gold-glow group-hover:scale-105 group-hover:shadow-gold-glow-lg transition-all duration-300 bg-gold-500 flex-shrink-0">
                 <img
                   src="/images/downtown-radio-logo.jpg"
                   alt="Downtown Radio Logo"
                   width={44}
                   height={44}
                   className="w-full h-full object-cover"
-                  style={{ width: '44px', height: '44px', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
                 {isPlaying && (
                   <div className="absolute inset-x-0 bottom-0 h-1.5 bg-black/60 flex items-end justify-center gap-0.5 pb-0.5">
@@ -85,16 +85,16 @@ export default function Header() {
 
               {/* Wordmark with Retro Star & Broadcaster Tag */}
               <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-base sm:text-lg font-black tracking-tight text-white uppercase group-hover:text-gold-400 transition-colors">
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  <span className="text-sm sm:text-lg font-black tracking-tight text-white uppercase group-hover:text-gold-400 transition-colors">
                     DOWNTOWN
                   </span>
-                  <span className="text-base sm:text-lg font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-500">
+                  <span className="text-sm sm:text-lg font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-500">
                     RADIO
                   </span>
                   <span className="text-xs text-gold-400 animate-pulse">✦</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-[10px] tracking-wider text-zinc-400 font-mono">
+                <div className="hidden xs:flex items-center gap-1.5 text-[9px] sm:text-[10px] tracking-wider text-zinc-400 font-mono">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   <span>Red Horn • Ife, Osun State</span>
                 </div>
@@ -194,7 +194,7 @@ export default function Header() {
           </div>
 
           {/* MOBILE ACTIONS */}
-          <div className="flex sm:hidden items-center space-x-2">
+          <div className="flex sm:hidden items-center space-x-1.5 xs:space-x-2">
             <button
               onClick={toggleTheme}
               className="p-1.5 rounded-lg text-zinc-300 bg-charcoal-800 border border-white/10"
@@ -204,17 +204,17 @@ export default function Header() {
             </button>
             <Link
               href="/events#ticket-booking-section"
-              className="px-2.5 py-1.5 rounded-lg text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow flex items-center gap-1"
+              className="px-2 py-1.5 rounded-lg text-[11px] font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow flex items-center gap-1"
             >
               <Ticket className="w-3 h-3 text-charcoal-950" />
               <span>Tickets</span>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-zinc-400 hover:text-white bg-charcoal-800 border border-white/10"
+              className="p-1.5 xs:p-2 rounded-xl text-zinc-400 hover:text-white bg-charcoal-800 border border-white/10"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-4 h-4 xs:w-5 xs:h-5" /> : <Menu className="w-4 h-4 xs:w-5 xs:h-5" />}
             </button>
           </div>
 

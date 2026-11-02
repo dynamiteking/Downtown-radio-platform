@@ -212,22 +212,22 @@ export default function TicketBookingSection() {
                 <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-400 mb-2">
                   Countdown to Red Horn Gates Opening:
                 </div>
-                <div className="grid grid-cols-4 gap-2 text-center font-mono">
-                  <div className="p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-base font-black text-gold-400">{timeLeft.days}</div>
-                    <div className="text-[9px] text-zinc-500 uppercase">Days</div>
+                <div className="grid grid-cols-4 gap-1.5 sm:gap-2 text-center font-mono">
+                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
+                    <div className="text-sm sm:text-base font-black text-gold-400">{timeLeft.days}</div>
+                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Days</div>
                   </div>
-                  <div className="p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-base font-black text-white">{timeLeft.hours}</div>
-                    <div className="text-[9px] text-zinc-500 uppercase">Hours</div>
+                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
+                    <div className="text-sm sm:text-base font-black text-white">{timeLeft.hours}</div>
+                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Hours</div>
                   </div>
-                  <div className="p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-base font-black text-white">{timeLeft.mins}</div>
-                    <div className="text-[9px] text-zinc-500 uppercase">Mins</div>
+                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
+                    <div className="text-sm sm:text-base font-black text-white">{timeLeft.mins}</div>
+                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Mins</div>
                   </div>
-                  <div className="p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-base font-black text-gold-400 animate-pulse">{timeLeft.secs}</div>
-                    <div className="text-[9px] text-zinc-500 uppercase">Secs</div>
+                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
+                    <div className="text-sm sm:text-base font-black text-gold-400 animate-pulse">{timeLeft.secs}</div>
+                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Secs</div>
                   </div>
                 </div>
               </div>
@@ -323,7 +323,7 @@ export default function TicketBookingSection() {
             </div>
           ) : (
             /* TICKET PURCHASE FORM */
-            <div className="p-6 sm:p-8 rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-2xl space-y-6">
+            <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-2xl space-y-6">
               
               <div>
                 <h3 className="text-xl sm:text-2xl font-black text-white">
@@ -342,15 +342,15 @@ export default function TicketBookingSection() {
                     <div
                       key={tier.id}
                       onClick={() => setSelectedTier(tier)}
-                      className={`p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer relative ${
+                      className={`p-3.5 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer relative ${
                         isSelected
                           ? 'bg-charcoal-900 border-gold-500 shadow-gold-glow'
                           : 'bg-charcoal-900/60 border-white/5 hover:border-white/20'
                       }`}
                     >
-                      <div className="flex items-start justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4">
                         <div className="space-y-1">
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 flex-wrap">
                             <span className="text-sm sm:text-base font-black text-white">
                               {tier.name}
                             </span>
@@ -365,7 +365,7 @@ export default function TicketBookingSection() {
                           </p>
                         </div>
 
-                        <div className="text-right">
+                        <div className="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end justify-between sm:justify-start gap-1 pt-1 sm:pt-0 border-t sm:border-t-0 border-white/5">
                           <div className="text-base sm:text-xl font-black text-gold-400 font-mono">
                             ₦{tier.price.toLocaleString()}
                           </div>

@@ -91,17 +91,17 @@ export default function TrackFeed() {
           return (
             <div
               key={track.id}
-              className={`group relative bg-charcoal-850/90 rounded-2xl border transition-all duration-300 p-5 flex flex-col justify-between hover:shadow-gold-glow ${
+              className={`group relative bg-charcoal-850/90 rounded-2xl border transition-all duration-300 p-4 sm:p-5 flex flex-col justify-between hover:shadow-gold-glow ${
                 isThisTrackPlaying
                   ? 'border-gold-500/60 ring-1 ring-gold-500/30'
                   : 'border-white/5 hover:border-gold-500/40'
               }`}
             >
               {/* Top Row: Cover, Info & Play */}
-              <div className="flex items-start space-x-4 mb-4">
+              <div className="flex items-start space-x-3 sm:space-x-4 mb-4">
                 
                 {/* Cover art with Play button */}
-                <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-charcoal-800 border border-white/10">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0 bg-charcoal-800 border border-white/10">
                   <img
                     src={track.coverUrl}
                     alt={track.title}
@@ -115,17 +115,17 @@ export default function TrackFeed() {
                         playTrack(track);
                       }
                     }}
-                    className={`absolute inset-0 m-auto w-10 h-10 rounded-full flex items-center justify-center transition-all ${
+                    className={`absolute inset-0 m-auto w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all ${
                       isThisTrackPlaying
                         ? 'bg-gold-gradient text-charcoal-950 shadow-gold-glow'
-                        : 'bg-black/60 text-white opacity-0 group-hover:opacity-100 hover:scale-110'
+                        : 'bg-black/60 text-white opacity-85 sm:opacity-0 sm:group-hover:opacity-100 hover:scale-110'
                     }`}
                     aria-label={`Play ${track.title}`}
                   >
                     {isThisTrackPlaying ? (
-                      <Pause className="w-5 h-5 fill-current" />
+                      <Pause className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                     ) : (
-                      <Play className="w-5 h-5 fill-current ml-0.5" />
+                      <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-current ml-0.5" />
                     )}
                   </button>
                 </div>

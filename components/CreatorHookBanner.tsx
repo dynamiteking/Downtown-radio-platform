@@ -32,12 +32,12 @@ export default function CreatorHookBanner() {
   const isCurrentPlaying = currentTrack?.id === sampleTrack.id && isPlaying;
 
   return (
-    <section className="my-14 rounded-3xl bg-gradient-to-br from-charcoal-850 via-charcoal-900 to-charcoal-950 border border-gold-500/30 p-6 sm:p-12 shadow-2xl relative overflow-hidden">
+    <section className="my-14 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-charcoal-850 via-charcoal-900 to-charcoal-950 border border-gold-500/30 p-4 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
       {/* Background subtle radial ambient light */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
         
         {/* LEFT COLUMN: 100% Original Downtown Radio Copywriting */}
         <div className="lg:col-span-7 space-y-6">
@@ -52,7 +52,7 @@ export default function CreatorHookBanner() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
             Direct Fan Power. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-500">
               Zero Gatekeepers.
@@ -126,7 +126,7 @@ export default function CreatorHookBanner() {
 
         {/* RIGHT COLUMN: Phone Player with DOWNTOWN RADIO Official Logo Cover */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="w-full max-w-[340px] rounded-[44px] bg-[#12141A] p-5 border-4 border-charcoal-700 shadow-[0_20px_50px_rgba(0,0,0,0.85)] relative">
+          <div className="w-full max-w-[300px] xs:max-w-[340px] rounded-[36px] sm:rounded-[44px] bg-[#12141A] p-4 sm:p-5 border-2 sm:border-4 border-charcoal-700 shadow-[0_20px_50px_rgba(0,0,0,0.85)] relative">
             
             {/* Phone Top Notch */}
             <div className="flex justify-between items-center text-[10px] text-zinc-400 font-mono mb-4 px-2">

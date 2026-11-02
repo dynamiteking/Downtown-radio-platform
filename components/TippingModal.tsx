@@ -50,22 +50,22 @@ export default function TippingModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-950/80 backdrop-blur-md animate-fade-in">
-      <div className="relative w-full max-w-lg bg-charcoal-900 border border-gold-500/30 rounded-3xl shadow-gold-glow-lg overflow-hidden text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-charcoal-950/80 backdrop-blur-md animate-fade-in">
+      <div className="relative w-full max-w-lg bg-charcoal-900 border border-gold-500/30 rounded-2xl sm:rounded-3xl shadow-gold-glow-lg overflow-hidden text-white flex flex-col max-h-[92vh]">
         
         {/* Glow Header Accent */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-500 via-amber-400 to-yellow-300" />
+        <div className="w-full h-1 bg-gradient-to-r from-gold-500 via-amber-400 to-yellow-300 flex-shrink-0" />
 
         {/* Close Button */}
         <button
           onClick={closeTippingModal}
-          className="absolute top-5 right-5 p-2 rounded-full bg-charcoal-800 text-zinc-400 hover:text-white hover:bg-charcoal-700 transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full bg-charcoal-800 text-zinc-400 hover:text-white hover:bg-charcoal-700 transition-colors z-10"
           aria-label="Close Modal"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <div className="p-6 sm:p-8">
+        <div className="p-4 sm:p-8 overflow-y-auto">
           
           {/* Header Track Context */}
           <div className="flex items-center space-x-4 mb-6 pb-6 border-b border-white/10">

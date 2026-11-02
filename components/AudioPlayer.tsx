@@ -66,7 +66,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="fixed bottom-4 sm:bottom-6 left-0 right-0 z-50 pointer-events-none flex justify-center px-3 sm:px-6">
+    <div className="fixed bottom-2.5 sm:bottom-6 left-0 right-0 z-50 pointer-events-none flex justify-center px-2 sm:px-6">
       <AnimatePresence mode="wait">
         
         {/* ========================================================= */}
@@ -79,7 +79,7 @@ export default function AudioPlayer() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 400, damping: 28 }}
-            className="pointer-events-auto ml-auto mr-2 sm:mr-4 group relative flex items-center space-x-3 p-2 pr-3.5 rounded-full bg-charcoal-950/90 backdrop-blur-2xl border border-gold-500/40 shadow-gold-glow hover:border-gold-500 hover:shadow-gold-glow-lg transition-all duration-300"
+            className="pointer-events-auto ml-auto mr-1 sm:mr-4 group relative flex items-center space-x-2 sm:space-x-3 p-1.5 sm:p-2 pr-2.5 sm:pr-3.5 rounded-full bg-charcoal-950/95 backdrop-blur-2xl border border-gold-500/40 shadow-gold-glow hover:border-gold-500 hover:shadow-gold-glow-lg transition-all duration-300 max-w-[calc(100vw-1rem)]"
           >
             {/* Spinning Album Art Mini */}
             <div 
@@ -179,7 +179,7 @@ export default function AudioPlayer() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.96 }}
             transition={{ type: 'spring', stiffness: 350, damping: 26 }}
-            className="pointer-events-auto relative w-full max-w-5xl rounded-3xl bg-charcoal-950/90 backdrop-blur-2xl border border-gold-500/30 shadow-[0_15px_40px_rgba(0,0,0,0.85)] hover:border-gold-500/50 transition-all duration-300 overflow-hidden"
+            className="pointer-events-auto relative w-full max-w-5xl rounded-2xl sm:rounded-3xl bg-charcoal-950/95 backdrop-blur-2xl border border-gold-500/30 shadow-[0_15px_40px_rgba(0,0,0,0.85)] hover:border-gold-500/50 transition-all duration-300 overflow-hidden"
           >
             {/* Top Glowing Wave / Progress Scrubber */}
             <div className="relative w-full h-1.5 bg-charcoal-800/80 cursor-pointer group">
@@ -205,12 +205,12 @@ export default function AudioPlayer() {
             </div>
 
             {/* Inner Dock Content */}
-            <div className="px-4 py-2.5 sm:px-6 sm:py-3 flex items-center justify-between gap-3 sm:gap-6">
+            <div className="px-2.5 py-1.5 sm:px-6 sm:py-3 flex items-center justify-between gap-1.5 sm:gap-6">
               
               {/* LEFT: ALBUM ART & TRACK META */}
-              <div className="flex items-center space-x-3.5 min-w-[170px] max-w-[260px] sm:max-w-xs">
+              <div className="flex items-center space-x-2 sm:space-x-3.5 min-w-0 flex-1 sm:flex-initial sm:min-w-[160px] sm:max-w-xs overflow-hidden">
                 {/* Rotating Vinyl Styled Art */}
-                <div className="relative group w-12 h-12 rounded-2xl overflow-hidden flex-shrink-0 border border-gold-500/30 shadow-md">
+                <div className="relative group w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden flex-shrink-0 border border-gold-500/30 shadow-md">
                   <img
                     src={currentTrack.coverUrl}
                     alt={currentTrack.title}
@@ -220,7 +220,7 @@ export default function AudioPlayer() {
                   />
                   {isPlaying && (
                     <div className="absolute inset-0 bg-charcoal-950/30 backdrop-blur-[1px] flex items-center justify-center">
-                      <div className="flex items-end gap-0.5 h-3.5">
+                      <div className="flex items-end gap-0.5 h-3 sm:h-3.5">
                         <span className="w-0.5 bg-gold-400 rounded-full animate-spectrum" style={{ animationDelay: '0.1s' }} />
                         <span className="w-0.5 bg-gold-400 rounded-full animate-spectrum" style={{ animationDelay: '0.3s' }} />
                         <span className="w-0.5 bg-gold-400 rounded-full animate-spectrum" style={{ animationDelay: '0.2s' }} />
@@ -229,21 +229,21 @@ export default function AudioPlayer() {
                   )}
                 </div>
 
-                <div className="overflow-hidden">
-                  <div className="flex items-center gap-1.5">
-                    <h4 className="text-xs sm:text-sm font-bold text-white truncate hover:text-gold-400 transition-colors cursor-pointer">
+                <div className="overflow-hidden min-w-0">
+                  <div className="flex items-center gap-1">
+                    <h4 className="text-[11px] sm:text-sm font-bold text-white truncate hover:text-gold-400 transition-colors cursor-pointer">
                       {currentTrack.title}
                     </h4>
                     {currentTrack.isPro && (
-                      <span className="text-[8px] font-black px-1.5 py-0.2 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30 uppercase">
+                      <span className="text-[7px] sm:text-[8px] font-black px-1 sm:px-1.5 py-0.2 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30 uppercase flex-shrink-0">
                         PRO
                       </span>
                     )}
                   </div>
-                  <p className="text-[11px] text-zinc-400 truncate hover:text-zinc-300 transition-colors">
+                  <p className="text-[10px] sm:text-[11px] text-zinc-400 truncate hover:text-zinc-300 transition-colors">
                     {currentTrack.artist}
                   </p>
-                  <div className="flex items-center gap-1.5 text-[10px] text-zinc-500 font-mono">
+                  <div className="hidden xs:flex items-center gap-1.5 text-[9px] sm:text-[10px] text-zinc-500 font-mono">
                     <span className="text-gold-400 font-medium">₦{currentTrack.totalTips.toLocaleString()}</span>
                     <span>•</span>
                     <span className="truncate">{currentTrack.genre}</span>
@@ -263,8 +263,8 @@ export default function AudioPlayer() {
               </div>
 
               {/* CENTER: TRANSPORT CONTROLS & TIME */}
-              <div className="flex flex-col items-center flex-1 max-w-md">
-                <div className="flex items-center space-x-3 sm:space-x-5 mb-0.5">
+              <div className="flex flex-col items-center flex-shrink-0 sm:flex-1 sm:max-w-md">
+                <div className="flex items-center space-x-1 sm:space-x-5 mb-0.5">
                   <button
                     onClick={() => setIsShuffle(!isShuffle)}
                     className={`p-1 rounded-full transition-colors hidden md:block ${
@@ -280,7 +280,7 @@ export default function AudioPlayer() {
                     className="p-1 rounded-full text-zinc-300 hover:text-white transition-transform active:scale-90"
                     aria-label="Previous Track"
                   >
-                    <SkipBack className="w-4 h-4 fill-current" />
+                    <SkipBack className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" />
                   </button>
 
                   {/* Main Play / Pause Button with Gold Glow Pulse */}
@@ -288,13 +288,13 @@ export default function AudioPlayer() {
                     whileTap={{ scale: 0.92 }}
                     whileHover={{ scale: 1.06 }}
                     onClick={togglePlay}
-                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gold-gradient text-charcoal-950 flex items-center justify-center shadow-gold-glow hover:shadow-gold-glow-lg transition-shadow"
+                    className="w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-gold-gradient text-charcoal-950 flex items-center justify-center shadow-gold-glow hover:shadow-gold-glow-lg transition-shadow"
                     aria-label={isPlaying ? 'Pause' : 'Play'}
                   >
                     {isPlaying ? (
-                      <Pause className="w-4 h-4 sm:w-5 sm:h-5 fill-charcoal-950" />
+                      <Pause className="w-3.5 h-3.5 sm:w-5 sm:h-5 fill-charcoal-950" />
                     ) : (
-                      <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-charcoal-950 ml-0.5" />
+                      <Play className="w-3.5 h-3.5 sm:w-5 sm:h-5 fill-charcoal-950 ml-0.5" />
                     )}
                   </motion.button>
 
@@ -303,7 +303,7 @@ export default function AudioPlayer() {
                     className="p-1 rounded-full text-zinc-300 hover:text-white transition-transform active:scale-90"
                     aria-label="Next Track"
                   >
-                    <SkipForward className="w-4 h-4 fill-current" />
+                    <SkipForward className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" />
                   </button>
 
                   <button
@@ -337,17 +337,17 @@ export default function AudioPlayer() {
               </div>
 
               {/* RIGHT: TIP ARTIST, VOLUME & MINIMIZE TOGGLE */}
-              <div className="flex items-center space-x-2 sm:space-x-3 min-w-[170px] justify-end">
+              <div className="flex items-center space-x-1.5 sm:space-x-3 min-w-0 sm:min-w-[160px] justify-end flex-shrink-0">
                 
                 {/* PROMINENT "TIP ARTIST" BUTTON */}
                 <motion.button
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
                   onClick={() => openTippingModal(currentTrack)}
-                  className="relative group px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-extrabold text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all flex items-center gap-1.5 flex-shrink-0"
+                  className="relative group px-2 py-1.5 sm:px-4 sm:py-2.5 rounded-lg sm:rounded-xl font-extrabold text-[11px] sm:text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all flex items-center gap-1 sm:gap-1.5 flex-shrink-0"
                 >
-                  <Banknote className="w-4 h-4 text-charcoal-900 animate-bounce" />
-                  <span>Tip Cash (₦)</span>
+                  <Banknote className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-charcoal-900 animate-bounce" />
+                  <span>Tip <span className="hidden sm:inline">Cash </span>(₦)</span>
                 </motion.button>
 
                 {/* Volume Slider Dropdown / Inline */}
@@ -397,10 +397,10 @@ export default function AudioPlayer() {
                 {/* MINIMIZE BUTTON (Fixes Screen Blocking!) */}
                 <button
                   onClick={() => setIsMinimized(true)}
-                  className="p-2 rounded-xl text-zinc-400 hover:text-white bg-charcoal-800/80 hover:bg-charcoal-700 border border-white/5 transition-all"
+                  className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl text-zinc-400 hover:text-white bg-charcoal-800/80 hover:bg-charcoal-700 border border-white/5 transition-all"
                   title="Minimize Player (Unblock Screen)"
                 >
-                  <ChevronDown className="w-4 h-4 text-gold-400" />
+                  <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400" />
                 </button>
 
               </div>

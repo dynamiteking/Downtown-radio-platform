@@ -72,34 +72,34 @@ export default function ArtistDashboard() {
     <div className="space-y-8 my-8">
       
       {/* ARTIST HERO PROFILE BANNER */}
-      <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-6 sm:p-8 shadow-2xl">
+      <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-4 sm:p-8 shadow-2xl">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="flex items-center space-x-5">
-            <div className="relative">
+          <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-5">
+            <div className="relative flex-shrink-0">
               <img
                 src={currentArtist.avatarUrl}
                 alt={currentArtist.stageName}
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-500/40 shadow-gold-glow"
+                className="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-500/40 shadow-gold-glow"
               />
               {currentArtist.isPro && (
                 <span className="absolute -bottom-2 -right-2 p-1.5 rounded-xl bg-gold-gradient text-charcoal-950 font-black shadow-gold-glow">
-                  <Crown className="w-4 h-4 fill-charcoal-950" />
+                  <Crown className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-charcoal-950" />
                 </span>
               )}
             </div>
 
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <h1 className="text-xl sm:text-4xl font-black text-white tracking-tight">
                   {currentArtist.stageName}
                 </h1>
                 {currentArtist.verified && (
-                  <ShieldCheck className="w-5 h-5 text-gold-400" />
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400" />
                 )}
                 {currentArtist.isPro && (
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-gold-500/20 text-gold-300 border border-gold-500/30">
+                  <span className="px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-gold-500/20 text-gold-300 border border-gold-500/30">
                     PRO ARTIST
                   </span>
                 )}
@@ -386,14 +386,14 @@ export default function ArtistDashboard() {
       </div>
 
       {/* TRACK CATALOG MANAGER */}
-      <div className="bg-charcoal-850/90 rounded-3xl border border-white/5 p-6 sm:p-8 shadow-xl">
+      <div className="bg-charcoal-850/90 rounded-2xl sm:rounded-3xl border border-white/5 p-4 sm:p-8 shadow-xl">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/5">
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold-400 mb-0.5">
               <Music className="w-3.5 h-3.5" />
               <span>CATALOG & REVENUE</span>
             </div>
-            <h3 className="text-2xl font-black text-white">
+            <h3 className="text-xl sm:text-2xl font-black text-white">
               Your Downtown Radio Catalog
             </h3>
             <p className="text-xs text-zinc-400">
@@ -403,15 +403,15 @@ export default function ArtistDashboard() {
 
           <button
             onClick={() => setOnboardingModalOpen(true)}
-            className="px-5 py-2.5 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center gap-2 self-start sm:self-auto"
+            className="px-4 sm:px-5 py-2.5 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center gap-2 self-start sm:self-auto"
           >
             <UploadCloud className="w-4 h-4 text-charcoal-900" />
             <span>Upload New Master File</span>
           </button>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
+        <div className="overflow-x-auto pb-2 scrollbar-none">
+          <table className="w-full min-w-[580px] text-left text-xs">
             <thead>
               <tr className="border-b border-white/5 text-[11px] font-bold uppercase text-zinc-400 tracking-wider">
                 <th className="pb-3 pl-2">Track & Cover</th>

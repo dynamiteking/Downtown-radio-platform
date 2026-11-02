@@ -110,36 +110,36 @@ export default function HeroBanner() {
       <div className="absolute -bottom-24 right-0 w-96 h-96 bg-gold-600/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Slide Content */}
-      <div className="relative z-10 px-6 py-10 sm:px-12 sm:py-16 max-w-4xl">
+      <div className="relative z-10 px-4 py-8 sm:px-12 sm:py-16 max-w-4xl">
         
         {/* Top Tag / Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-charcoal-800/90 border border-gold-500/40 text-xs font-bold text-gold-400 tracking-wider shadow-gold-glow mb-4 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-charcoal-800/90 border border-gold-500/40 text-[11px] sm:text-xs font-bold text-gold-400 tracking-wider shadow-gold-glow mb-4 backdrop-blur-md">
           {slide.badgeIcon}
           <span>{slide.badge}</span>
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-2">
+        <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-2">
           {slide.title}
         </h1>
 
         {/* Artist / Subtitle */}
-        <p className="text-lg sm:text-xl font-semibold text-gold-400/95 mb-3 flex items-center gap-2">
+        <p className="text-base sm:text-xl font-semibold text-gold-400/95 mb-3 flex items-center gap-2 flex-wrap">
           <span>{slide.artist}</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-gold-500" />
-          <span className="text-sm font-normal text-zinc-400">{slide.tag}</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-gold-500 hidden sm:inline" />
+          <span className="text-xs sm:text-sm font-normal text-zinc-400">{slide.tag}</span>
         </p>
 
-        <p className="text-sm sm:text-base text-zinc-300 max-w-2xl mb-8 leading-relaxed font-normal">
+        <p className="text-xs sm:text-base text-zinc-300 max-w-2xl mb-6 sm:mb-8 leading-relaxed font-normal">
           {slide.subtitle}
         </p>
 
         {/* Dynamic Metric Pill Row */}
-        <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mb-8 p-3 rounded-2xl bg-charcoal-800/50 border border-white/5 backdrop-blur-md">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 max-w-lg mb-6 sm:mb-8 p-2.5 sm:p-3 rounded-2xl bg-charcoal-800/50 border border-white/5 backdrop-blur-md">
           {slide.stats.map((s, idx) => (
             <div key={idx} className="text-left">
-              <div className="text-[11px] font-medium text-zinc-400 uppercase tracking-wider">{s.label}</div>
-              <div className="text-sm sm:text-lg font-bold text-white tracking-wide">{s.value}</div>
+              <div className="text-[10px] sm:text-[11px] font-medium text-zinc-400 uppercase tracking-wider">{s.label}</div>
+              <div className="text-xs sm:text-lg font-bold text-white tracking-wide truncate">{s.value}</div>
             </div>
           ))}
         </div>

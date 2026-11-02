@@ -93,14 +93,14 @@ export default function DistributionModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-950/85 backdrop-blur-md">
-      <div className="relative w-full max-w-2xl bg-charcoal-900 border border-gold-500/40 rounded-3xl shadow-gold-glow-lg overflow-hidden text-white flex flex-col max-h-[92vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-charcoal-950/85 backdrop-blur-md">
+      <div className="relative w-full max-w-2xl bg-charcoal-900 border border-gold-500/40 rounded-2xl sm:rounded-3xl shadow-gold-glow-lg overflow-hidden text-white flex flex-col max-h-[92vh]">
         
         {/* Glow Header Accent */}
-        <div className="w-full h-1.5 bg-gradient-to-r from-gold-500 via-amber-400 to-yellow-300" />
+        <div className="w-full h-1.5 bg-gradient-to-r from-gold-500 via-amber-400 to-yellow-300 flex-shrink-0" />
 
         {/* Modal Header */}
-        <div className="p-6 border-b border-white/10 flex items-center justify-between">
+        <div className="p-4 sm:p-6 border-b border-white/10 flex items-center justify-between">
           <div>
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/15 text-[11px] font-bold text-gold-400 mb-1 border border-gold-500/30">
               <Share2 className="w-3 h-3 text-gold-400" />

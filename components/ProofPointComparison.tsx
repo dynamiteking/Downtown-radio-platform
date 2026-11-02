@@ -66,19 +66,19 @@ export default function ProofPointComparison() {
             <span>THE INDIE CREATOR ARITHMETIC</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-5xl font-black text-white tracking-tight leading-tight">
             Real Cultural Capital. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-500">
               The Power of 50 True Believers.
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+          <p className="text-xs sm:text-base text-zinc-300 leading-relaxed">
             Stop waiting for corporate algorithms to validate your voice. When you build authentic community, you don't need millions of passive background streams to make music full-time.
           </p>
 
           {/* THE WORKED EXAMPLE BOX */}
-          <div className="p-5 sm:p-6 rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-gold-glow">
+          <div className="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-gold-glow">
             <div className="flex items-start space-x-3">
               <div className="p-2.5 rounded-xl bg-gold-500/20 text-gold-400 flex-shrink-0 mt-0.5">
                 <Banknote className="w-5 h-5" />
@@ -113,7 +113,7 @@ export default function ProofPointComparison() {
 
         {/* RIGHT COLUMN: Interactive Comparison Bars */}
         <div className="lg:col-span-6">
-          <div className="p-6 sm:p-8 rounded-3xl bg-charcoal-850 border border-white/10 shadow-2xl space-y-6">
+          <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal-850 border border-white/10 shadow-2xl space-y-6">
             
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div>

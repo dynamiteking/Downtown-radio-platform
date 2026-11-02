@@ -94,19 +94,19 @@ export default function DKVisionarySection() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-gold-500/10 via-amber-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Luxury Container */}
-      <div className="rounded-3xl bg-gradient-to-br from-charcoal-900 via-charcoal-850 to-charcoal-950 border-2 border-gold-500/30 p-6 sm:p-10 lg:p-14 shadow-2xl relative overflow-hidden">
+      <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-charcoal-900 via-charcoal-850 to-charcoal-950 border-2 border-gold-500/30 p-4 sm:p-10 lg:p-14 shadow-2xl relative overflow-hidden">
         
         {/* Subtle Top Accent Ribbon */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-500 via-amber-400 to-yellow-300" />
 
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-10 pb-6 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/30 text-xs font-black uppercase tracking-wider text-gold-400 mb-2">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/30 text-[11px] sm:text-xs font-black uppercase tracking-wider text-gold-400 mb-2">
               <Crown className="w-4 h-4 text-gold-400" />
               <span>THE ARCHITECT & PIONEER • CEO NOTE</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-5xl font-black text-white tracking-tight leading-tight">
               The Mind Behind Downtown Radio
             </h2>
           </div>

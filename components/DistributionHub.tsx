@@ -96,33 +96,33 @@ export default function DistributionHub() {
     <div className="space-y-12 my-8">
       
       {/* HERO BANNER */}
-      <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-8 sm:p-12 shadow-2xl">
+      <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-4 sm:p-8 lg:p-12 shadow-2xl">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/15 text-xs font-extrabold text-gold-400 tracking-wider mb-4 border border-gold-500/30">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/15 text-[11px] sm:text-xs font-extrabold text-gold-400 tracking-wider mb-4 border border-gold-500/30">
             <Share2 className="w-3.5 h-3.5" />
             <span>GLOBAL MUSIC DISTRIBUTION NETWORK</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+          <h1 className="text-2xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
             Release Your Music Everywhere. <br />
             <span className="text-transparent bg-clip-text bg-gold-gradient">
               Keep 100% of Your Masters.
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-8">
+          <p className="text-xs sm:text-base text-zinc-300 leading-relaxed mb-6 sm:mb-8">
             Distribute your singles, EPs, and albums to Spotify, Apple Music, Audiomack, Boomplay, and 150+ digital streaming platforms worldwide with automated royalty splits in Nigerian Naira and US Dollars.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <button
               onClick={() => setDistributionModalOpen(true)}
-              className="px-6 py-3.5 rounded-2xl font-black text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform active:scale-95 flex items-center gap-2"
+              className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform active:scale-95 flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-charcoal-950" />
-              <span>Submit Unreleased Master for Distribution</span>
+              <span>Submit Master for Distribution</span>
               <ArrowRight className="w-4 h-4 ml-1" />
             </button>
 
@@ -131,7 +131,7 @@ export default function DistributionHub() {
                 setActiveTab('pro');
                 setProModalOpen(true);
               }}
-              className="px-5 py-3.5 rounded-2xl font-bold text-sm text-gold-400 bg-charcoal-800/90 border border-gold-500/40 hover:border-gold-500 transition-all flex items-center gap-2"
+              className="px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm text-gold-400 bg-charcoal-800/90 border border-gold-500/40 hover:border-gold-500 transition-all flex items-center gap-2"
             >
               <span>Explore Downtown Pro Plan</span>
             </button>
@@ -156,10 +156,10 @@ export default function DistributionHub() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-charcoal-900 border border-white/10 self-start md:self-auto">
+          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-charcoal-900 border border-white/10 self-start md:self-auto overflow-x-auto max-w-full scrollbar-none">
             <button
               onClick={() => setFilterCategory('all')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                 filterCategory === 'all'
                   ? 'bg-gold-500 text-charcoal-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white'
@@ -169,17 +169,17 @@ export default function DistributionHub() {
             </button>
             <button
               onClick={() => setFilterCategory('music')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                 filterCategory === 'music'
                   ? 'bg-gold-500 text-charcoal-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
-              Music DSPs (13)
+              Music (13)
             </button>
             <button
               onClick={() => setFilterCategory('podcast')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                 filterCategory === 'podcast'
                   ? 'bg-gold-500 text-charcoal-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white'
@@ -189,7 +189,7 @@ export default function DistributionHub() {
             </button>
             <button
               onClick={() => setFilterCategory('radio')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                 filterCategory === 'radio'
                   ? 'bg-gold-500 text-charcoal-950 shadow-sm'
                   : 'text-zinc-400 hover:text-white'
@@ -201,11 +201,11 @@ export default function DistributionHub() {
         </div>
 
         {/* The Exact Logos Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3.5">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-2.5 sm:gap-3.5">
           {filteredPlatforms.map(p => (
             <div
               key={p.id}
-              className={`p-3.5 rounded-2xl bg-charcoal-850/80 border transition-all duration-300 hover:-translate-y-1 group flex flex-col items-center text-center relative overflow-hidden ${
+              className={`p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-charcoal-850/80 border transition-all duration-300 hover:-translate-y-1 group flex flex-col items-center text-center relative overflow-hidden ${
                 p.highlight
                   ? 'border-gold-500/30 hover:border-gold-400 shadow-md'
                   : 'border-white/5 hover:border-white/20'
@@ -216,7 +216,7 @@ export default function DistributionHub() {
               )}
 
               {/* Exact Official Circular Logo Image */}
-              <div className="w-12 h-12 rounded-full overflow-hidden mb-2.5 p-0.5 bg-charcoal-900/60 border border-white/10 group-hover:scale-110 group-hover:border-gold-500/50 transition-transform flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden mb-2 sm:mb-2.5 p-0.5 bg-charcoal-900/60 border border-white/10 group-hover:scale-110 group-hover:border-gold-500/50 transition-transform flex items-center justify-center shadow-lg">
                 <img
                   src={p.logo}
                   alt={`${p.name} logo`}
