@@ -72,6 +72,111 @@ body {
   scrollbar-width: none;
 }
 
+/* Studio Acoustic Dot-Matrix Grid */
+.acoustic-grid {
+  background-image: radial-gradient(rgba(255, 159, 28, 0.14) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, #000 25%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, #000 25%, transparent 95%);
+}
+
+/* Analog Studio Micro-Noise / Tape Grain Texture */
+.studio-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Ambient Background Animations */
+@keyframes aurora-drift-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(50px, -30px) scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+@keyframes aurora-drift-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-40px, 45px) scale(1.1);
+    opacity: 0.75;
+  }
+}
+
+@keyframes radar-ping-slow {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(3.0);
+    opacity: 0;
+  }
+}
+
+@keyframes float-dust-slow {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-140px) translateX(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes vinyl-spin-continuous {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-aurora-1 {
+  animation: aurora-drift-1 18s ease-in-out infinite;
+}
+
+.animate-aurora-2 {
+  animation: aurora-drift-2 24s ease-in-out infinite;
+}
+
+.animate-radar-ping {
+  animation: radar-ping-slow 7s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-dust-1 {
+  animation: float-dust-slow 12s ease-in-out infinite;
+}
+
+.animate-dust-2 {
+  animation: float-dust-slow 16s ease-in-out infinite 4s;
+}
+
+.animate-dust-3 {
+  animation: float-dust-slow 20s ease-in-out infinite 8s;
+}
+
+.animate-vinyl-continuous {
+  animation: vinyl-spin-continuous 20s linear infinite;
+}
+
 /* Animation utilities */
 @keyframes spectrum {
   0% {
