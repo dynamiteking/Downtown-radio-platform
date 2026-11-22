@@ -60,7 +60,7 @@ export const siteConfig: SiteConfig = {
   shortName: 'Downtown',
   tagline: 'The Sovereign Frequency for African Independent Sound',
   frequency: '101.4 FM WAT',
-  canonicalBroadcastingNode: 'Broadcasting Node: Ile-Ife & Lagos • 101.4 FM WAT',
+  canonicalBroadcastingNode: 'Broadcasting Node: Lagos • 101.4 FM WAT',
   contact: {
     email: 'hello@downtownradio.ng',
     ceoEmail: 'dynamiteking1@gmail.com',

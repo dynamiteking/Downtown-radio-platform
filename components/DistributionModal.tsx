@@ -136,7 +136,7 @@ export default function DistributionModal() {
               </label>
               <input
                 type="text"
-                placeholder="e.g. Ile-Ife Sunsets & Starlight"
+                placeholder="e.g. Lagos Sunsets & Starlight"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
                 className="w-full py-2.5 px-3.5 rounded-xl bg-charcoal-800 border border-white/10 text-xs sm:text-sm text-white focus:outline-none focus:border-gold-500"

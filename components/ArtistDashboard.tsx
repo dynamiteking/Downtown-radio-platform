@@ -105,7 +105,7 @@ export default function ArtistDashboard() {
                 )}
               </div>
               <p className="text-xs sm:text-sm text-gold-400/90 font-medium mb-1">
-                {currentArtist.genre} • Resident Creator at Ile-Ife & Lagos
+                {currentArtist.genre} • Resident Creator at Lagos Mainland
               </p>
               <p className="text-xs text-zinc-400 max-w-xl line-clamp-2">
                 {currentArtist.bio}
@@ -198,7 +198,7 @@ export default function ArtistDashboard() {
           </div>
           <div className="flex items-center gap-1.5 text-xs text-zinc-400">
             <span className="text-white font-semibold">Top City:</span>
-            <span>Ile-Ife (44%), Lagos (36%)</span>
+            <span>Lagos (64%), Abuja (36%)</span>
           </div>
         </div>
 

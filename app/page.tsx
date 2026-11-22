@@ -126,7 +126,7 @@ export default function PortalGateway() {
   ];
 
   return (
-    <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between py-6 sm:py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden w-full">
+    <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between py-5 sm:py-8 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden w-full">
       
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[650px] h-[350px] bg-gradient-to-tr from-gold-500/10 via-amber-500/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
@@ -139,30 +139,30 @@ export default function PortalGateway() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center max-w-4xl mx-auto space-y-4 mb-8 sm:mb-12 w-full pt-2"
+        className="text-center max-w-4xl mx-auto space-y-4 mb-6 sm:mb-12 w-full pt-1 sm:pt-2 px-1 sm:px-0"
       >
         {/* Unified Canonical Broadcasting Node Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-charcoal-850/90 border border-gold-500/30 text-[11px] font-mono uppercase tracking-widest text-zinc-300 shadow-md">
-          <span className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-emerald-400 animate-pulse' : 'bg-gold-500'}`} />
-          <span className="text-gold-400 font-bold">Broadcasting Node:</span>
-          <span>Ile-Ife & Lagos • 101.4 FM WAT</span>
+        <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-charcoal-850/90 border border-gold-500/30 text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-zinc-300 shadow-md max-w-full">
+          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${isPlaying ? 'bg-emerald-400 animate-pulse' : 'bg-gold-500'}`} />
+          <span className="text-gold-400 font-bold flex-shrink-0">Broadcasting Node:</span>
+          <span className="truncate">Lagos • 101.4 FM WAT</span>
         </div>
 
         {/* 1. Eyebrow Badge */}
         <div>
-          <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono font-bold tracking-wider text-gold-300 bg-gold-500/10 border border-gold-500/25">
+          <span className="inline-block px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold tracking-wider text-gold-300 bg-gold-500/10 border border-gold-500/25 max-w-full">
             101.4 FM WAT • AFRICAN INDEPENDENT SOUND ECOSYSTEM
           </span>
         </div>
 
         {/* 2. Master Headline */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+        <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight px-1">
           Welcome to{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-300 to-yellow-200">
             Downtown Radio.
           </span>
           <br />
-          <span className="text-xl sm:text-3xl lg:text-4xl text-zinc-300 font-extrabold block mt-2">
+          <span className="text-base sm:text-2xl lg:text-3xl text-zinc-300 font-extrabold block mt-2">
             The Sovereign Frequency for African Sound.
           </span>
         </h1>
@@ -173,11 +173,11 @@ export default function PortalGateway() {
         </p>
 
         {/* 4. Primary Hero Actions */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto w-full px-2 sm:px-0">
           {/* Action A: Play "Fur Sure" (ATWN EP) */}
           <button
             onClick={handlePlayFeatured}
-            className="px-6 py-3.5 rounded-2xl font-black text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform active:scale-95 flex items-center gap-2.5"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-2xl font-black text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2.5"
           >
             {isFeaturedPlaying ? (
               <>
@@ -196,7 +196,7 @@ export default function PortalGateway() {
           <Link
             href="/artist-dashboard"
             onClick={() => setUserRole('artist')}
-            className="px-5 py-3.5 rounded-2xl font-bold text-xs sm:text-sm text-zinc-200 hover:text-white bg-charcoal-800/90 hover:bg-charcoal-700 border border-white/10 hover:border-gold-500/40 transition-all flex items-center gap-2"
+            className="w-full sm:w-auto px-5 py-3.5 rounded-2xl font-bold text-xs sm:text-sm text-zinc-200 hover:text-white bg-charcoal-800/90 hover:bg-charcoal-700 border border-white/10 hover:border-gold-500/40 transition-all flex items-center justify-center gap-2"
           >
             <Mic2 className="w-4 h-4 text-gold-400" />
             <span>Explore Artist Portal</span>
@@ -225,7 +225,7 @@ export default function PortalGateway() {
                 <div className="p-3.5 rounded-2xl bg-charcoal-850/80 border border-gold-500/20 text-left text-[11px] font-mono space-y-1.5 text-zinc-400">
                   <div className="flex items-center justify-between border-b border-white/5 pb-1">
                     <span className="text-gold-400 font-bold">SOVEREIGN NODE ARCHIVE:</span>
-                    <span className="text-white">LAT 7.48° N, LONG 4.56° E</span>
+                    <span className="text-white">LAT 6.52° N, LONG 3.37° E</span>
                   </div>
                   <div className="flex items-center justify-between border-b border-white/5 pb-1">
                     <span>AUDIO CARRIER:</span>

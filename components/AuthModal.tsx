@@ -98,7 +98,7 @@ export default function AuthModal() {
               <span className="text-base">🎧</span>
               <div>
                 <div className="text-xs font-bold text-white">Amara Kalu (Sound Connoisseur)</div>
-                <div className="text-[10px] text-zinc-400">Regular at Ile-Ife gatherings</div>
+                <div className="text-[10px] text-zinc-400">Regular at Downtown gatherings</div>
               </div>
             </div>
             <ArrowRight className="w-3.5 h-3.5 text-gold-400" />

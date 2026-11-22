@@ -24,7 +24,7 @@ export default function HeroBanner() {
   const { currentTrack, isPlaying, playTrack, togglePlay } = useAudio();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const topTrack = tracks[0]; // "Midnight in Ife (Rooftop Mix)"
+  const topTrack = tracks[0]; // "Midnight in Lagos (Rooftop Mix)"
   const featuredEvent = events[0]; // "Royal Rave Festival"
 
   const slides = [

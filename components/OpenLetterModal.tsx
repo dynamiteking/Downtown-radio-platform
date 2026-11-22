@@ -39,7 +39,7 @@ export default function OpenLetterModal() {
         {/* Scrollable Letter Body */}
         <div className="overflow-y-auto pr-2 space-y-4 text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
           <p className="text-gold-300 font-medium">
-            To every visionary building original sound from Lagos, Ife, Abuja, Accra, and across the African underground —
+            To every visionary building original sound from Lagos, Abuja, Port Harcourt, Accra, and across the African underground —
           </p>
 
           <p>
@@ -67,7 +67,7 @@ export default function OpenLetterModal() {
             <p className="font-bold text-white">
               Yours in sovereign sound,<br />
               <span className="text-gold-400 font-black">The Downtown Radio Collective & Editorial Board</span><br />
-              <span className="text-xs text-zinc-400 font-mono">Downtown Radio • Lagos & Ile-Ife, Nigeria</span>
+              <span className="text-xs text-zinc-400 font-mono">Downtown Radio • Lagos, Nigeria</span>
             </p>
           </div>
         </div>

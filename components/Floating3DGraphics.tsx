@@ -100,7 +100,7 @@ export default function Floating3DGraphics() {
           </span>
         </div>
         <div className="text-[9px] font-mono text-zinc-400 tracking-wider">
-          Broadcasting Node: Ile-Ife & Lagos • 101.4 FM WAT
+          Broadcasting Node: Lagos • 101.4 FM WAT
         </div>
         <div className="text-[8px] font-mono text-zinc-500">
           PCM LOSSLESS CARRIER • 24-BIT / 96KHZ • {isPlaying ? 'LIVE / PLAYING • 101.4 FM WAT' : 'READY TO STREAM • 101.4 FM WAT'}

@@ -55,7 +55,7 @@ const GROOMING_PILLARS: GroomingPillar[] = [
       'Lossless master optimization for global DSP distribution',
       'Analog warmth, tape saturation & spectral frequency cleanup',
       'A&R feedback on arrangement, hooks & sonic identity',
-      'Access to Downtown Sound Labs in Lagos & Ile-Ife',
+      'Access to Downtown Sound Labs in Lagos',
     ],
   },
   {

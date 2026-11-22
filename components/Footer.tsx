@@ -58,7 +58,7 @@ export default function Footer() {
 
             <div className="text-[11px] text-zinc-300 font-mono flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Broadcasting Node: Ile-Ife & Lagos • 101.4 FM WAT</span>
+              <span>Broadcasting Node: Lagos • 101.4 FM WAT</span>
             </div>
 
             {/* Official Social Handles */}

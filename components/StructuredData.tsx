@@ -141,7 +141,7 @@ export default function StructuredData() {
       },
       {
         '@type': 'MusicRecording',
-        name: 'Midnight in Ife (Rooftop Dub)',
+        name: 'Midnight in Lagos (Rooftop Dub)',
         duration: 'PT3M38S',
         byArtist: 'Lady Donli & Odunsi',
       },

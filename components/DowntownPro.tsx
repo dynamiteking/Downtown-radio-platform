@@ -37,7 +37,7 @@ export default function DowntownPro() {
         { label: 'Standard Festival Performance Pitching', included: true },
         { label: 'Fan Tip Platform Fee', detail: '8% Commission', included: true },
         { label: 'Guaranteed Playlist Placement', included: false },
-        { label: 'Priority Stage Review for Ile-Ife & Lagos', included: false },
+        { label: 'Priority Stage Review for Lagos Showcases', included: false },
         { label: 'Fast-Track 24-Hour Global Distribution', included: false },
         { label: 'Gold Pro Badge on Artist Profile & Audio Player', included: false },
       ],
@@ -101,7 +101,7 @@ export default function DowntownPro() {
         </h1>
 
         <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mb-6">
-          Unlock 0% tip commission, guaranteed playlist placement, and priority review for our rooftop gatherings in Ile-Ife and Lagos.
+          Unlock 0% tip commission, guaranteed playlist placement, and priority review for our rooftop gatherings in Lagos.
         </p>
 
         {/* Monthly vs Yearly Switcher */}
@@ -250,7 +250,7 @@ export default function DowntownPro() {
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-gold-400" />
-                <span>Priority pitch review for Ile-Ife & Lagos events</span>
+                <span>Priority pitch review for Lagos events</span>
               </div>
             </div>
 

@@ -166,7 +166,7 @@ export default function PitchModal() {
               </select>
             ) : (
               <div
-                onClick={() => setUploadedTrackName('unreleased_ife_live_master.wav')}
+                onClick={() => setUploadedTrackName('unreleased_live_master.wav')}
                 className="border-2 border-dashed border-gold-500/40 hover:border-gold-500 rounded-2xl p-5 text-center cursor-pointer bg-charcoal-800/40 transition-colors"
               >
                 <UploadCloud className="w-8 h-8 text-gold-400 mx-auto mb-1 animate-bounce" />

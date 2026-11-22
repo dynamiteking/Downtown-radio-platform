@@ -24,7 +24,7 @@ export default function ThreeStepsGuide() {
 
   const handleCopyLink = () => {
     setCopied(true);
-    navigator.clipboard?.writeText('https://downtownradio.live/ife/midnight-rooftop');
+    navigator.clipboard?.writeText('https://downtownradio.live/track/midnight-rooftop');
     addToast('Direct Link Copied!', 'Universal playback & direct tip URL copied to clipboard.', 'gold');
     setTimeout(() => setCopied(false), 2000);
   };
@@ -66,7 +66,7 @@ export default function ThreeStepsGuide() {
                 </div>
                 <div className="flex-1 overflow-hidden">
                   <div className="text-xs font-bold text-white truncate">
-                    ife-rooftop-session-master.wav
+                    lagos-rooftop-session-master.wav
                   </div>
                   <div className="text-[10px] text-zinc-400">
                     42.8 MB • Lossless Audio Engine
@@ -121,7 +121,7 @@ export default function ThreeStepsGuide() {
             <div className="p-4 rounded-2xl bg-charcoal-900 border border-white/10 mb-6 space-y-3">
               <div className="flex items-center space-x-2 p-2 rounded-xl bg-charcoal-800/80 border border-white/5">
                 <span className="text-[11px] font-mono text-gold-300 truncate flex-1">
-                  downtownradio.live/ife/midnight
+                  downtownradio.live/track/midnight
                 </span>
                 <button
                   onClick={handleCopyLink}
@@ -177,7 +177,7 @@ export default function ThreeStepsGuide() {
                     ✦
                   </div>
                   <div>
-                    <div className="font-bold text-white text-[11px]">Tunde in Ife</div>
+                    <div className="font-bold text-white text-[11px]">Tunde in Lagos</div>
                     <div className="text-[9px] text-zinc-400">4m ago • Instant Bank Transfer</div>
                   </div>
                 </div>

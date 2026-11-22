@@ -198,7 +198,7 @@ export default function DKVisionarySection() {
               <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-gold-400 mb-1">
                 <span>FOUNDER & VISIONARY</span>
                 <span>•</span>
-                <span>ILE-IFE & LAGOS, NIGERIA</span>
+                <span>LAGOS, NIGERIA</span>
               </div>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
                 DK
