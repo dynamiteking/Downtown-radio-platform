@@ -251,7 +251,7 @@ export default function DKVisionarySection() {
               {/* Cover Art & EP Overview Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center mb-5">
                 {/* Official Album Art */}
-                <div className="sm:col-span-5 relative aspect-square rounded-2xl overflow-hidden border-2 border-gold-500/40 shadow-xl group/cover">
+                <div className="sm:col-span-5 relative w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 aspect-square rounded-2xl overflow-hidden border-2 border-gold-500/40 shadow-xl group/cover bg-charcoal-900">
                   <img
                     src="/images/atwn/atwn-cover.jpg"
                     alt="ATWN (After This What Next) Official Cover Art"

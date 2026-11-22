@@ -81,7 +81,7 @@ export default function ArtistDashboard() {
               <img
                 src={currentArtist.avatarUrl}
                 alt={currentArtist.stageName}
-                className="w-18 h-18 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-gold-500/40 shadow-gold-glow"
+                className="w-20 h-20 sm:w-24 sm:h-24 aspect-square rounded-2xl object-cover border-2 border-gold-500/40 shadow-gold-glow"
               />
               {currentArtist.isPro && (
                 <span className="absolute -bottom-2 -right-2 p-1.5 rounded-xl bg-gold-gradient text-charcoal-950 font-black shadow-gold-glow">

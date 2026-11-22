@@ -27,7 +27,7 @@ export default function CuratedPlaylists() {
             Curated Playlists
           </h2>
           <p className="text-sm text-zinc-400">
-            Hand-picked selections highlighting the soundscapes of Ile-Ife, Lagos Mainland, and the indie underground.
+            Hand-picked selections highlighting the soundscapes of the African indie underground and premier festival anthems.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function CuratedPlaylists() {
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <button
                     onClick={() => handlePlayPlaylist(playlist.trackIds)}
-                    className="w-13 h-13 rounded-full bg-gold-gradient text-charcoal-950 flex items-center justify-center shadow-gold-glow transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 active:scale-95"
+                    className="w-12 h-12 rounded-full bg-gold-gradient text-charcoal-950 flex items-center justify-center shadow-gold-glow transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 active:scale-95"
                     aria-label={`Play ${playlist.title}`}
                   >
                     <Play className="w-6 h-6 fill-charcoal-950 ml-0.5" />

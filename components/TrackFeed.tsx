@@ -101,7 +101,7 @@ export default function TrackFeed() {
               <div className="flex items-start space-x-3.5 sm:space-x-4 mb-4">
                 
                 {/* Cover art with Play button */}
-                <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0 bg-charcoal-800 border border-white/10">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 aspect-square rounded-2xl overflow-hidden flex-shrink-0 bg-charcoal-800 border border-white/10 shadow-md">
                   <img
                     src={track.coverUrl}
                     alt={track.title}

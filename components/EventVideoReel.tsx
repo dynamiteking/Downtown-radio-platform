@@ -176,7 +176,7 @@ export default function EventVideoReel() {
                 onClick={togglePlay}
                 className="absolute inset-0 bg-black/45 backdrop-blur-[2px] flex items-center justify-center cursor-pointer transition-all"
               >
-                <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full bg-gold-gradient text-charcoal-950 flex items-center justify-center shadow-gold-glow-lg transform hover:scale-110 active:scale-95 transition-all">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gold-gradient text-charcoal-950 flex items-center justify-center shadow-gold-glow-lg transform hover:scale-110 active:scale-95 transition-all">
                   <Play className="w-8 h-8 fill-charcoal-950 ml-1" />
                 </div>
               </div>

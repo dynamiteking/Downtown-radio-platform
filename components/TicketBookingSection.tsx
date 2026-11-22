@@ -171,7 +171,7 @@ export default function TicketBookingSection() {
           <div className="rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-gold-glow-lg bg-charcoal-900 relative group">
             
             {/* The Official Poster Flyer */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-charcoal-950">
+            <div className="relative aspect-[3/4] w-full overflow-hidden bg-charcoal-950">
               <img
                 src="/images/royal-rave-poster.jpg"
                 alt="Royal Rave Festival Official Flyer — Status: To Be Announced (TBA)"
