@@ -48,7 +48,7 @@ export default function EventsPage() {
             className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow flex items-center gap-1.5 active:scale-95 transition-transform"
           >
             <Ticket className="w-3.5 h-3.5 text-charcoal-950" />
-            <span>🎟️ Buy Tickets (Red Horn)</span>
+            <span>🎟️ Event Status & Waitlist (TBA)</span>
           </button>
 
           {events[0] && (

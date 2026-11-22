@@ -93,7 +93,7 @@ export default function DistributionHub() {
   ];
 
   return (
-    <div className="space-y-12 my-8">
+    <div id="distribution" className="space-y-12 my-8 scroll-mt-24">
       
       {/* HERO BANNER */}
       <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-charcoal-850 p-4 sm:p-8 lg:p-12 shadow-2xl">

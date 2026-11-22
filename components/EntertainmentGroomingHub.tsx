@@ -34,7 +34,7 @@ const GROOMING_PILLARS: GroomingPillar[] = [
     id: 'pillar-performance',
     number: '01',
     title: 'Stage Presence & Performance Grooming',
-    subtitle: 'From bedroom acoustic demos to commanding thousands under the Red Horn palace lights.',
+    subtitle: 'From bedroom acoustic demos to commanding live festival audiences under stadium strobes.',
     icon: <Mic2 className="w-5 h-5 text-gold-400" />,
     coach: 'Curated by Downtown Stage Directors',
     highlights: [
@@ -168,7 +168,7 @@ export default function EntertainmentGroomingHub() {
             <span>APPLY FOR THE NEXT GROOMING COHORT</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-            Ready to Take Your Sound to the Red Horn Stage?
+            Ready to Take Your Sound to Live Festival Stages?
           </h3>
           <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
             We review unreleased masters every week. Selected creators receive performance training, live audio mastering, festival slot placement, and guaranteed editorial push.
@@ -192,7 +192,7 @@ export default function EntertainmentGroomingHub() {
             onClick={() => setActiveTab('events')}
             className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-zinc-300 hover:text-white bg-charcoal-800 border border-white/10 hover:border-gold-500/30 transition-colors"
           >
-            Pitch Tracks for Red Horn
+            Browse Open Festival Slots
           </button>
         </div>
 

@@ -34,10 +34,10 @@ const REELS: VideoReel[] = [
     src: '/videos/downtown-radio-kalakuta-movement.mp4',
     title: 'The Energy Was Unreal: It’s Not Just a Show, It’s a Movement',
     badge: 'HISTORIC MOVEMENT',
-    caption: 'From Kalakuta Museum to the ancient rooftops of Red Horn, Ife — pure unfiltered sonic liberation.',
+    caption: 'From Kalakuta Museum to intimate rooftop gatherings — pure unfiltered sonic liberation.',
     quote: '“Downtown Radio is not just a show… it’s a movement. Bringing independent African music culture into its sovereign power.”',
     credits: 'Official Downtown Radio Archive • Broadcast Live',
-    location: 'Kalakuta Museum to Red Horn Palace',
+    location: 'Kalakuta Museum to Underground Rooftops',
   },
   {
     id: 'reel-fest',
@@ -270,7 +270,7 @@ export default function EventVideoReel() {
               className="mt-3 w-full py-3 px-4 rounded-xl font-black text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center justify-center gap-2"
             >
               <Ticket className="w-4 h-4 text-charcoal-950" />
-              <span>Be Part of the Next Movement • Red Horn (Nov 14)</span>
+              <span>Be Part of the Next Movement (Status: TBA)</span>
             </button>
           </div>
 

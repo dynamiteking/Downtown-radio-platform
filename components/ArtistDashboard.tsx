@@ -289,7 +289,7 @@ export default function ArtistDashboard() {
                     {isConfirmed && (
                       <div className="mt-3 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-300 flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                        <span>Congratulations! Soundcheck time: 7:30 PM at Red Horn (Show: 9PM — 5AM). Live festival 4K recording master included.</span>
+                        <span>Congratulations! Your performance pitch is approved. Showcase venue schedule and soundcheck call time will be sent directly via notification.</span>
                       </div>
                     )}
                   </div>
@@ -300,7 +300,7 @@ export default function ArtistDashboard() {
 
           <div className="mt-5 pt-4 border-t border-white/5 text-center">
             <p className="text-xs text-zinc-400 mb-2">
-              Want to perform at the Royal Rave Festival or Ikeja warehouse showcases?
+              Want to perform at upcoming Royal Rave showcases or Ikeja creative gatherings?
             </p>
             <button
               onClick={() => {

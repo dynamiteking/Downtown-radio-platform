@@ -115,13 +115,13 @@ export default function FanPatronageGuide() {
         <div className="space-y-2 text-center md:text-left max-w-xl">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold-400">
             <Zap className="w-3.5 h-3.5 text-gold-400" />
-            <span>HEAR THEM LIVE AT RED HORN</span>
+            <span>LIVE SHOWCASE EXPERIENCES</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-            Meet the Artists at Royal Rave Festival
+            Connect With Artists at Upcoming Showcases
           </h3>
           <p className="text-xs sm:text-sm text-zinc-300">
-            Saturday, 14th November 2026 (9PM — 5AM) at Red Horn, Ife. Connect with the creators you support in an intimate palace rooftop atmosphere.
+            Experience the sovereign sound live. Royal Rave Showcase status: To Be Announced (TBA). Lock in notifications for early tickets and private venue announcements.
           </p>
         </div>
 

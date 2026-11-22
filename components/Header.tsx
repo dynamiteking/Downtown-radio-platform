@@ -96,7 +96,7 @@ export default function Header() {
                 </div>
                 <div className="flex items-center gap-1.5 text-[10px] tracking-wider text-zinc-400 font-mono">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Red Horn • Ife, Osun State</span>
+                  <span>101.4 FM WAT • Sovereign Sound</span>
                 </div>
               </div>
             </Link>
@@ -140,7 +140,7 @@ export default function Header() {
               className="px-3.5 py-2 rounded-xl text-xs font-black text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-200 transform active:scale-95 flex items-center gap-1.5"
             >
               <Ticket className="w-3.5 h-3.5 text-charcoal-950" />
-              <span>🎟️ Get Tickets</span>
+              <span>🎟️ Events (TBA)</span>
             </Link>
 
             {/* 👑 DK — The Mind Behind Downtown Radio */}
@@ -257,7 +257,7 @@ export default function Header() {
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow text-center mt-2"
             >
               <Ticket className="w-4 h-4 text-charcoal-950" />
-              <span>🎟️ Get Festival Tickets (Red Horn)</span>
+              <span>🎟️ Event Status & Waitlist (TBA)</span>
             </Link>
 
             <button

@@ -103,7 +103,7 @@ export default function AboutPage() {
             <div className="p-4 rounded-2xl bg-charcoal-950/70 border border-white/5 space-y-1">
               <span className="text-xl sm:text-2xl font-black text-gold-400 font-mono">Live</span>
               <h4 className="text-xs font-bold uppercase tracking-wider text-white">Festival Stages</h4>
-              <p className="text-[11px] text-zinc-400">From the Red Horn palace in Ile-Ife to underground Lagos lofts.</p>
+              <p className="text-[11px] text-zinc-400">Curated rooftop stages from Ile-Ife to underground Lagos creative lofts.</p>
             </div>
           </div>
         </div>

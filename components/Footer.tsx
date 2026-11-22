@@ -58,7 +58,7 @@ export default function Footer() {
 
             <div className="text-[11px] text-zinc-400 font-mono flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Broadcast Node: Red Horn, Ife, Osun State</span>
+              <span>Broadcast Node: 101.4 FM WAT • Sovereign Frequency</span>
             </div>
 
             {/* Official Social Handles */}
@@ -128,8 +128,8 @@ export default function Footer() {
                   href="/events"
                   className="hover:text-gold-400 transition-colors text-gold-400 font-semibold flex items-center gap-1"
                 >
-                  <span>Royal Rave Festival (Red Horn)</span>
-                  <span className="text-[9px] bg-gold-500/20 px-1.5 py-0.2 rounded border border-gold-500/30">NOV 14</span>
+                  <span>Royal Rave Showcase</span>
+                  <span className="text-[9px] bg-gold-500/20 px-1.5 py-0.2 rounded border border-gold-500/30">TBA</span>
                 </Link>
               </li>
               <li>
@@ -137,7 +137,7 @@ export default function Footer() {
                   href="/events#ticket-booking-section"
                   className="hover:text-gold-400 transition-colors"
                 >
-                  Buy Festival Tickets
+                  Event Status & Waitlist (TBA)
                 </Link>
               </li>
               <li>

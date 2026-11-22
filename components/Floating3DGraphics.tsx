@@ -99,7 +99,7 @@ export default function Floating3DGraphics() {
           </span>
         </div>
         <div className="text-[9px] font-mono text-zinc-500 tracking-wider">
-          NODE: RED HORN PALACE, IFE (LAT 7.48° N, LONG 4.56° E)
+          BROADCAST REGION: NIGERIA (WEST AFRICA // 101.4 FM)
         </div>
         <div className="text-[8px] font-mono text-zinc-600">
           PCM LOSSLESS CARRIER • 24-BIT / 96KHZ • {isPlaying ? 'STREAM: LIVE BROADCAST' : 'STREAM: STANDBY'}
@@ -246,7 +246,7 @@ export default function Floating3DGraphics() {
           </div>
 
           <div className="text-[7px] font-mono text-zinc-500 text-center tracking-wider">
-            RED HORN ROOFTOP GATHERING • ILE-IFE LIVE
+            DOWNTOWN RADIO SOUND ARCHIVE • SOVEREIGN AUDIO
           </div>
         </div>
       </div>

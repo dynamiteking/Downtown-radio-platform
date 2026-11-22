@@ -88,7 +88,7 @@ export default function DKVisionarySection() {
   };
 
   return (
-    <section id="dk-visionary" className="my-20 relative overflow-hidden w-full">
+    <section id="dk-visionary" className="my-20 relative overflow-hidden w-full scroll-mt-24">
       
       {/* Outer Glow & Ambient Light */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[350px] bg-gradient-to-tr from-gold-500/10 via-amber-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />

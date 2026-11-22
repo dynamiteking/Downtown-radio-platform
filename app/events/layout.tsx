@@ -1,16 +1,16 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Royal Rave Rooftop Gathering (Red Horn, Ife) — Events & Tickets',
+  title: 'Events & Live Activations — Royal Rave Showcase (Status: TBA)',
   description:
-    'Secure tickets for the Royal Rave Rooftop Gathering at Red Horn, Ile-Ife, Osun State on Saturday, 14th November 2026 (9:00 PM — 5:00 AM WAT). Pitch your unreleased tracks for 4 open headliner slots.',
+    'Explore upcoming live activations, rooftop showcases, and festival pitching from Downtown Radio. Royal Rave Showcase status: To Be Announced (TBA). Pitch your unreleased tracks for open headliner slots.',
   alternates: {
     canonical: '/events',
   },
   openGraph: {
-    title: 'Royal Rave Rooftop Gathering — Red Horn, Ife (Sat, Nov 14, 2026)',
+    title: 'Events & Live Activations — Downtown Radio (Royal Rave Status: TBA)',
     description:
-      'All-night rooftop festival experience at Red Horn, Ife. Early Bird ₦3,500, VIP Palace Deck ₦12,500, Creator Pass ₦25,000. 4 open stage slots for independent acts.',
+      'Live activations and festival pitching from Downtown Radio. Royal Rave Showcase status: To Be Announced (TBA). Join the notification waitlist and pitch unreleased masters.',
     url: '/events',
     images: ['/images/royal-rave-poster-updated.jpg'],
   },

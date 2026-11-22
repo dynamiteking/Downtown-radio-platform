@@ -27,19 +27,19 @@ export default function PitchModal() {
   const [trackSelectionType, setTrackSelectionType] = useState<'catalog' | 'upload'>('catalog');
   const [selectedCatalogTrack, setSelectedCatalogTrack] = useState<string>(tracks[0]?.title || '');
   const [uploadedTrackName, setUploadedTrackName] = useState<string>('');
-  const [requestedSlot, setRequestedSlot] = useState<string>('Royal Rave Headline Showcase (1:30 AM — 3:00 AM)');
+  const [requestedSlot, setRequestedSlot] = useState<string>('Royal Rave Headline Showcase (Status: TBA)');
   const [epkUrl, setEpkUrl] = useState<string>('https://downtownradio.live/epk/' + currentArtist.stageName.toLowerCase().replace(/\s+/g, ''));
   const [livePerformanceLink, setLivePerformanceLink] = useState<string>('https://youtube.com/watch?v=live-performance-preview');
-  const [message, setMessage] = useState<string>('We have prepared an intimate 30-minute set with live horns and talking drums for the Red Horn palace stage.');
+  const [message, setMessage] = useState<string>('We have prepared an intimate 30-minute set with live horns and talking drums for the upcoming showcase stage.');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!pitchModalOpen || !pitchEvent) return null;
 
   const slotOptions = [
-    'Opening Alté Warmup (9:00 PM — 10:30 PM)',
-    'Peak Midnight Groove (11:00 PM — 1:00 AM)',
-    'Royal Rave Headline Showcase (1:30 AM — 3:00 AM)',
-    'Red Horn Sunrise After-Hours (3:30 AM — 5:00 AM)',
+    'Opening Alté Warmup Set',
+    'Peak Midnight Groove Slot',
+    'Royal Rave Headline Showcase (Status: TBA)',
+    'Sunrise After-Hours Showcase',
   ];
 
   const handleSubmit = (e: React.FormEvent) => {

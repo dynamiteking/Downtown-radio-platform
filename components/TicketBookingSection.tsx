@@ -36,9 +36,9 @@ const TICKET_TIERS: TicketTier[] = [
     id: 'general',
     name: 'General Rave Pass (Early Believer)',
     price: 3500,
-    description: 'Full festival grounds access from 9PM till dawn at Red Horn palace courtyard.',
+    description: 'Full festival grounds access from dusk till dawn.',
     perks: [
-      'Access to main rave floor (9PM — 5AM)',
+      'Access to main rave floor (Dusk — Dawn)',
       'Complimentary LED festival wristband',
       'Lossless digital festival recording download',
     ],
@@ -48,9 +48,9 @@ const TICKET_TIERS: TicketTier[] = [
     name: 'VIP Palace Balcony',
     price: 8500,
     badge: 'MOST POPULAR',
-    description: 'Elevated panoramic views over the Red Horn stage with fast-track entry and drinks.',
+    description: 'Elevated panoramic views over the main stage with fast-track entry and drinks.',
     perks: [
-      'Express VIP queue bypass at Red Horn gate',
+      'Express VIP queue priority bypass',
       'Elevated Palace Balcony stage view',
       '2 complimentary signature cocktail/drink tokens',
       'Exclusive Downtown Radio Royal Rave lanyard',
@@ -152,37 +152,37 @@ export default function TicketBookingSection() {
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-xs font-bold uppercase tracking-wider text-gold-400 mb-3 shadow-gold-glow">
           <Ticket className="w-4 h-4 text-gold-400" />
-          <span>OFFICIAL FESTIVAL TICKETS • STRICT RSVP</span>
+          <span>OFFICIAL FESTIVAL FLYER • STATUS: TO BE ANNOUNCED (TBA)</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-          Experience Royal Rave Festival
+          Royal Rave Festival
         </h2>
         <p className="text-sm sm:text-base text-zinc-300 mt-2">
-          Saturday, 14th November 2026 • 9:00 PM — 5:00 AM WAT • Red Horn, Ife, Osun State
+          Status: To Be Announced (TBA) • Date & Venue TBA • Priority Pass & Early Notification
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        {/* LEFT COLUMN: Corrected Flier Showcase & Event Details (5 Cols) */}
+        {/* LEFT COLUMN: Flier Showcase & Event Details (5 Cols) */}
         <div className="lg:col-span-5 space-y-6">
           
-          {/* Festival Flier Card with Official Corrected Date, Location & Time */}
+          {/* Festival Flier Card with Status TBA */}
           <div className="rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-gold-glow-lg bg-charcoal-900 relative group">
             
-            {/* The Official Corrected Poster */}
+            {/* The Official Poster Flyer */}
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-charcoal-950">
               <img
                 src="/images/royal-rave-poster.jpg"
-                alt="Royal Rave Festival Official Poster — Red Horn, Ife, Osun State (14th November 2026)"
+                alt="Royal Rave Festival Official Flyer — Status: To Be Announced (TBA)"
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
 
               {/* Verified Badge Overlay */}
               <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-charcoal-950/85 backdrop-blur-md border border-gold-500/40 text-[11px] font-black uppercase tracking-wider text-gold-400 flex items-center gap-1.5 shadow-md">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>OFFICIAL FESTIVAL FLIER</span>
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                <span>STATUS: TO BE ANNOUNCED (TBA)</span>
               </div>
             </div>
 
@@ -191,45 +191,33 @@ export default function TicketBookingSection() {
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center space-x-2 text-gold-400 font-bold">
                   <Calendar className="w-4 h-4" />
-                  <span>Saturday, 14th November 2026</span>
+                  <span>Date: To Be Announced (TBA)</span>
                 </div>
                 <div className="flex items-center space-x-1.5 text-zinc-300 font-mono text-[11px]">
                   <Clock className="w-3.5 h-3.5 text-gold-400" />
-                  <span>9:00 PM — 5:00 AM WAT</span>
+                  <span>Time: TBA</span>
                 </div>
               </div>
 
               <div className="flex items-start space-x-2 text-xs text-zinc-300">
                 <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block font-bold">Red Horn Palace Grounds</strong>
-                  <span className="text-zinc-400">Ancient Ile-Ife, Osun State, Nigeria</span>
+                  <strong className="text-white block font-bold">Venue: To Be Announced (TBA)</strong>
+                  <span className="text-zinc-400">Nigeria • Official Venue Update Coming Soon</span>
                 </div>
               </div>
 
-              {/* Live Countdown */}
-              <div className="pt-2 border-t border-white/5">
-                <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-400 mb-2">
-                  Countdown to Red Horn Gates Opening:
+              {/* Status Update Card */}
+              <div className="pt-3 border-t border-white/5 space-y-2">
+                <div className="flex items-center justify-between text-xs font-mono">
+                  <span className="text-zinc-400 uppercase font-bold text-[10px]">EVENT STATUS</span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 font-bold text-[10px] border border-gold-500/30">
+                    TO BE ANNOUNCED (TBA)
+                  </span>
                 </div>
-                <div className="grid grid-cols-4 gap-1.5 sm:gap-2 text-center font-mono">
-                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-sm sm:text-base font-black text-gold-400">{timeLeft.days}</div>
-                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Days</div>
-                  </div>
-                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-sm sm:text-base font-black text-white">{timeLeft.hours}</div>
-                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Hours</div>
-                  </div>
-                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-sm sm:text-base font-black text-white">{timeLeft.mins}</div>
-                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Mins</div>
-                  </div>
-                  <div className="p-1.5 sm:p-2 rounded-xl bg-charcoal-900 border border-white/5">
-                    <div className="text-sm sm:text-base font-black text-gold-400 animate-pulse">{timeLeft.secs}</div>
-                    <div className="text-[8px] sm:text-[9px] text-zinc-500 uppercase">Secs</div>
-                  </div>
-                </div>
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  We are no longer hosting Royal Rave at previous locations. The official flyer is locked in and new venue & date details will be published here first.
+                </p>
               </div>
 
             </div>
@@ -240,10 +228,10 @@ export default function TicketBookingSection() {
           <div className="p-4 rounded-2xl bg-charcoal-850/70 border border-white/5 text-xs text-zinc-400 space-y-1">
             <div className="flex items-center gap-1.5 text-white font-bold">
               <ShieldCheck className="w-4 h-4 text-gold-400" />
-              <span>Strict Capacity Notice (400 — 500 Guests)</span>
+              <span>Priority Notification & Waitlist Guarantee</span>
             </div>
             <p>
-              To preserve the intimate rooftop acoustic experience, tickets are strictly capped. No tickets will be sold at the gate on event night.
+              Registering below locks your priority tier on the announcement waitlist. You will receive private SMS and email notices the moment ticket booking goes live.
             </p>
           </div>
 
@@ -295,11 +283,11 @@ export default function TicketBookingSection() {
                 <div className="grid grid-cols-2 gap-3 pt-3 border-t border-white/10 text-xs">
                   <div>
                     <span className="text-zinc-500 block text-[10px] uppercase font-mono">Date & Time</span>
-                    <strong className="text-zinc-200">Nov 14, 2026 (9PM — 5AM)</strong>
+                    <strong className="text-zinc-200">To Be Announced (TBA)</strong>
                   </div>
                   <div>
                     <span className="text-zinc-500 block text-[10px] uppercase font-mono">Location</span>
-                    <strong className="text-zinc-200">Red Horn, Ife, Osun State</strong>
+                    <strong className="text-zinc-200">To Be Announced (TBA)</strong>
                   </div>
                 </div>
               </div>
@@ -317,7 +305,7 @@ export default function TicketBookingSection() {
                   onClick={() => setBookedTicket(null)}
                   className="w-full sm:w-auto py-3 px-5 rounded-xl font-semibold text-xs text-zinc-300 bg-charcoal-800 hover:bg-charcoal-700 border border-white/10"
                 >
-                  Book Another Ticket
+                  Register Another Pass
                 </button>
               </div>
             </div>
@@ -327,10 +315,10 @@ export default function TicketBookingSection() {
               
               <div>
                 <h3 className="text-xl sm:text-2xl font-black text-white">
-                  Select Your Festival Tier
+                  Reserve Festival Priority Pass
                 </h3>
                 <p className="text-xs text-zinc-400 mt-1">
-                  Choose your access pass for Saturday, 14th November at Red Horn, Ife.
+                  Status: To Be Announced (TBA). Lock your priority tier for early notification and guaranteed entry.
                 </p>
               </div>
 
@@ -521,7 +509,7 @@ export default function TicketBookingSection() {
                     ) : (
                       <>
                         <Sparkles className="w-4 h-4 fill-charcoal-950" />
-                        <span>Secure Tickets to Red Horn (₦{totalAmount.toLocaleString()})</span>
+                        <span>Reserve Priority Pass (₦{totalAmount.toLocaleString()})</span>
                         <ArrowRight className="w-4 h-4" />
                       </>
                     )}

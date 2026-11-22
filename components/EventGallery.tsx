@@ -68,7 +68,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     image: '/images/gallery/downtown-event-5-afterparty.jpg',
     title: 'All-Night Soundstage & Jam',
     tag: 'Rooftop Afterparty',
-    location: 'Red Horn Sound System',
+    location: 'Downtown Sound System',
     date: '9PM — 5AM Session',
     description: 'Intimate late-night vibes where indie recording artists and loyal listeners celebrate authentic sonic expression.',
   },
@@ -124,7 +124,7 @@ export default function EventGallery() {
           className="self-start sm:self-auto px-4 py-2.5 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center gap-1.5"
         >
           <Ticket className="w-3.5 h-3.5 text-charcoal-950" />
-          <span>Join Next Show at Red Horn</span>
+          <span>Join Upcoming Showcase Waitlist</span>
         </button>
       </div>
 
@@ -319,10 +319,10 @@ export default function EventGallery() {
                   className="w-full py-3 px-4 rounded-xl font-bold text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow flex items-center justify-center gap-2"
                 >
                   <Ticket className="w-4 h-4 text-charcoal-950" />
-                  <span>Experience The Next Show • Red Horn</span>
+                  <span>Experience The Next Showcase • Status: TBA</span>
                 </button>
                 <span className="text-[10px] text-zinc-500 text-center block">
-                  Saturday, 14th November 2026 • 9PM — 5AM
+                  Date & Venue To Be Announced (TBA)
                 </span>
               </div>
             </div>

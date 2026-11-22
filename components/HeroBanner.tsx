@@ -29,19 +29,19 @@ export default function HeroBanner() {
 
   const slides = [
     {
-      id: 'slide-festival',
-      badge: 'DOWNTOWN RADIO PRESENTS • OFFICIAL FESTIVAL',
+      id: 'slide-event',
+      badge: 'DOWNTOWN RADIO PRESENTS • STATUS: TO BE ANNOUNCED (TBA)',
       badgeIcon: <Flame className="w-3.5 h-3.5 text-gold-400" />,
       title: 'Royal Rave Festival',
-      artist: 'Saturday, 14th November • 9:00 PM — 5:00 AM WAT',
-      subtitle: 'The all-night indie & alté celebration at Red Horn, Ife, Osun State. Grand palace stage, stacked sound systems, and intimate performances from dusk to dawn.',
+      artist: 'Official Flyer • Status: To Be Announced (TBA)',
+      subtitle: 'The all-night indie & alté celebration. Signature sound systems, electric DJ sets, and intimate performances from dusk to dawn. Date and venue are To Be Announced (TBA).',
       image: '/images/royal-rave-poster.jpg',
-      tag: 'Red Horn, Ife, Osun State',
+      tag: 'Status: To Be Announced (TBA)',
       posterThumb: '/images/royal-rave-poster.jpg',
       stats: [
-        { label: 'Date', value: '14th Nov 2026' },
-        { label: 'Time', value: '9:00 PM — 5:00 AM' },
-        { label: 'Location', value: 'Red Horn, Ife' },
+        { label: 'Status', value: 'TBA' },
+        { label: 'Date', value: 'TBA' },
+        { label: 'Venue', value: 'TBA' },
       ],
       actionType: 'event',
       event: featuredEvent,
@@ -201,7 +201,7 @@ export default function HeroBanner() {
                 className="px-6 py-3.5 rounded-2xl font-black text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform active:scale-95 flex items-center gap-2.5"
               >
                 <Sparkles className="w-5 h-5 fill-charcoal-950" />
-                <span>Pitch to Perform at Red Horn</span>
+                <span>Pitch for Future Showcase</span>
               </button>
 
               <button
@@ -213,7 +213,7 @@ export default function HeroBanner() {
                 className="px-5 py-3.5 rounded-2xl font-bold text-sm text-gold-400 bg-charcoal-800/90 hover:bg-charcoal-700 border border-gold-500/40 hover:border-gold-500 transition-all flex items-center gap-2 shadow-sm"
               >
                 <Ticket className="w-4 h-4 text-gold-400" />
-                <span>Buy Show Tickets</span>
+                <span>Event Waitlist & Status (TBA)</span>
               </button>
 
               <button
@@ -221,7 +221,7 @@ export default function HeroBanner() {
                 className="px-5 py-3.5 rounded-2xl font-semibold text-sm text-white bg-charcoal-800/90 hover:bg-charcoal-700 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-2"
               >
                 <Users className="w-4 h-4 text-zinc-400" />
-                <span>View Festival Lineup</span>
+                <span>Explore Events Hub</span>
               </button>
             </>
           )}
@@ -260,10 +260,10 @@ export default function HeroBanner() {
           />
           <div className="p-2.5 bg-charcoal-950/95 border-t border-gold-500/40 text-center">
             <span className="text-[10px] font-black uppercase tracking-wider text-gold-400 block">
-              14th Nov • Red Horn, Ife
+              STATUS: TO BE ANNOUNCED (TBA)
             </span>
             <span className="text-[9px] text-zinc-400">
-              9:00 PM — 5:00 AM WAT
+              Date & Venue TBA • Official Flyer
             </span>
           </div>
         </div>

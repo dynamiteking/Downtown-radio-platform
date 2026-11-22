@@ -50,7 +50,7 @@ export default function PortalGateway() {
       highlights: [
         'Direct fan tips deposited to Nigerian banks',
         '100% master & publishing legal ownership',
-        'Pitch for Red Horn Palace Stage (Royal Rave)',
+        'Pitch for Signature Festival Stages (Royal Rave)',
         'Global DSP distribution with automated splits',
       ],
       onEnter: () => setUserRole('artist'),
@@ -79,8 +79,8 @@ export default function PortalGateway() {
       id: 'events',
       number: 'PORTAL 03 // LIVE ACTIVATIONS',
       title: 'EVENTS & TICKETS',
-      subtitle: 'Secure tickets and pitch to perform at upcoming activations like the Royal Rave Rooftop Gathering (Ile-Ife).',
-      badge: 'NEXT: NOV 14 • RED HORN, IFE',
+      subtitle: 'Explore live event activations, photo archives, and pitch to perform. Royal Rave Showcase status: To Be Announced (TBA).',
+      badge: 'STATUS: TO BE ANNOUNCED (TBA)',
       icon: <Ticket className="w-7 h-7 text-orange-400" />,
       actionText: 'Explore Events & Tickets',
       href: '/events',
@@ -88,9 +88,9 @@ export default function PortalGateway() {
       borderColor: 'group-hover:border-orange-500/80',
       iconBg: 'bg-orange-500/15 border-orange-500/40 text-orange-400',
       highlights: [
-        'Royal Rave Festival tickets (9:00 PM — 5:00 AM)',
-        '4 Open Headliner Slots for independent acts',
-        'Palace Archway Stage & All-Night Bass sound',
+        'Royal Rave Showcase (Status: TBA)',
+        'Open Headliner Slots for independent acts',
+        'Signature Sound Systems & All-Night Bass',
         'Authentic crowd photo documentary & video reels',
       ],
       onEnter: () => {},
@@ -135,7 +135,7 @@ export default function PortalGateway() {
         <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-charcoal-850 border border-gold-500/30 text-[11px] font-mono uppercase tracking-widest text-zinc-300 shadow-md">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-gold-400 font-bold">BROADCASTING NODE:</span>
-          <span>Red Horn, Ife & Lagos • 101.4 FM WAT</span>
+          <span>Lagos & Ile-Ife • 101.4 FM WAT</span>
         </div>
 
         {/* Master Headline */}
@@ -305,8 +305,8 @@ export default function PortalGateway() {
           </div>
 
           <div className="p-3.5 rounded-2xl bg-charcoal-850/60 border border-white/5">
-            <span className="text-lg sm:text-xl font-black text-amber-400 font-mono block">NOV 14</span>
-            <span className="text-[10px] text-zinc-400 font-mono uppercase tracking-wider">Royal Rave at Red Horn</span>
+            <span className="text-lg sm:text-xl font-black text-amber-400 font-mono block">STATUS: TBA</span>
+            <span className="text-[10px] text-zinc-400 font-mono uppercase tracking-wider">Royal Rave Showcase</span>
           </div>
 
           <div className="p-3.5 rounded-2xl bg-charcoal-850/60 border border-white/5">

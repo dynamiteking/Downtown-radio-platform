@@ -1,9 +1,9 @@
 # Downtown Radio — Comprehensive Knowledge Base & Technical Ecosystem Specification
 
 ## 1. Executive Summary & Brand Identity
-Downtown Radio is a premier West African entertainment grooming sanctuary, broadcast network, and fintech-enabled music distribution platform. Founded and led by CEO DK, the platform operates from core hubs at Red Horn (Ile-Ife, Osun State) and Lagos, Nigeria, broadcasting on 101.4 FM WAT and globally via uncompressed web stream at https://downtownradio.live.
+Downtown Radio is a premier West African entertainment grooming sanctuary, broadcast network, and fintech-enabled music distribution platform. Founded and led by CEO DK, the platform operates from core hubs across Lagos and Ile-Ife, Nigeria, broadcasting on 101.4 FM WAT and globally via uncompressed web stream at https://downtownradio.live.
 
-The mission of Downtown Radio is to solve the economic and distribution bottlenecks faced by independent African musicians. By pairing direct Naira fan tipping with lossless web streaming, palace festival activations (the Royal Rave Rooftop Gathering), global DSP delivery (to Spotify, Apple Music, Audiomack, Boomplay, and 16 other networks), and holistic stage grooming, Downtown Radio enables creators to achieve financial sovereignty from day one.
+The mission of Downtown Radio is to solve the economic and distribution bottlenecks faced by independent African musicians. By pairing direct Naira fan tipping with lossless web streaming, live festival showcases (the Royal Rave Showcase), global DSP delivery (to Spotify, Apple Music, Audiomack, Boomplay, and 16 other networks), and holistic stage grooming, Downtown Radio enables creators to achieve financial sovereignty from day one.
 
 ## 2. Executive Leadership: DK (Dynamite King)
 - **Role**: CEO, Pioneer, and Executive Visionary of Downtown Radio
@@ -12,17 +12,13 @@ The mission of Downtown Radio is to solve the economic and distribution bottlene
 - **Musical Return in 2026**: After a four-year hiatus from the recording studio to scale business ventures and refine artistic philosophy, DK returns to music in 2026 with a major collaborative debut EP titled **"ATWN" (After This, What Next?)** alongside **Nirati Dagwi**.
 - **Key Track**: "FUR SURE" (Lead Single from ATWN EP), streaming natively on the platform.
 
-## 3. Signature Gathering: Royal Rave Rooftop Gathering
-- **Event Name**: Royal Rave Rooftop Gathering
-- **Date**: Saturday, 14th November 2026
-- **Hours**: 9:00 PM — 5:00 AM West Africa Time (All-Night Festival)
-- **Venue**: Red Horn, Ile-Ife, Osun State, Nigeria
-- **Atmosphere**: Palace archways, rooftop bass sound system, curated crowd, and high-energy live band performances.
-- **Ticket Tiers**:
-  1. Early Bird Pass: ₦3,500 (Full rooftop access, complimentary drink token)
-  2. VIP Palace Deck: ₦12,500 (Priority palace entrance, elevated deck, backstage lounge access)
-  3. Creator Pass: ₦25,000 (Soundcheck access, artist lounge pass, festival 4K recording master inclusion)
-- **Performance Pitching**: 4 slots reserved for emerging independent acts. Selected acts receive soundcheck evaluation, live multi-track audio mastering, and 4K concert video footage.
+## 3. Signature Gathering: Royal Rave Showcase
+- **Event Name**: Royal Rave Showcase
+- **Status**: To Be Announced (TBA)
+- **Venue & Location**: To Be Announced (TBA) • Nigeria
+- **Atmosphere**: Signature bass sound systems, curated crowd, and high-energy live band performances.
+- **Priority Pass Registration**: Open on platform with early notification alerts for venue and date announcement.
+- **Performance Pitching**: Slots reserved for emerging independent acts. Selected acts receive soundcheck evaluation, live multi-track audio mastering, and 4K concert video footage.
 
 ## 4. Monetization & The Indie Creator Arithmetic
 Downtown Radio pioneers the "50 True Believers" model:
@@ -76,7 +72,7 @@ Listeners and fans can tip any featured artist directly in Nigerian Naira (₦) 
 DK is the CEO, Pioneer, and Creative Director of Downtown Radio. He is an executive, event host, and visionary who is also releasing a major collaborative debut EP titled "ATWN" (After This, What Next?) alongside Nirati Dagwi in 2026.
 
 ### When and where is the Royal Rave Festival?
-The Royal Rave Rooftop Gathering takes place on Saturday, 14th November 2026, from 9:00 PM to 5:00 AM WAT at Red Horn, Ile-Ife, Osun State, Nigeria.
+The Royal Rave Showcase date and venue are To Be Announced (TBA). Independent creators and fans can register for early priority notifications and pitch performance slots on the platform.
 
 ### Can independent artists pitch to perform at Downtown Radio events?
 Yes. Independent creators can pitch their tracks via the Artist Portal at https://downtownradio.live/artist-dashboard or the Events page at https://downtownradio.live/events. 4 performance slots are available for the Royal Rave Festival.

@@ -59,7 +59,7 @@ export default function OpenLetterModal() {
           </p>
           <ul className="space-y-2 list-disc list-inside text-xs sm:text-sm text-zinc-300 pl-2">
             <li><strong className="text-white">Direct Fan Tipping in Naira:</strong> Instant bank transfers, cards, and Apple Pay landing in your account with up to 100% payout retention.</li>
-            <li><strong className="text-white">Real Live Festival Stages:</strong> Performance slots curated exclusively for indie creators — like the upcoming <em>Royal Rave Festival at Red Horn, Ife (Saturday, 14th November, 9PM — 5AM)</em>.</li>
+            <li><strong className="text-white">Real Live Festival Stages:</strong> Performance slots curated exclusively for indie creators across our live showcases and festival activations (including the Royal Rave Showcase, Status: TBA).</li>
             <li><strong className="text-white">100% Master Ownership:</strong> You keep every single master right, split payments automatically, and distribute to Spotify, Apple, and Boomplay on your terms.</li>
           </ul>
 
@@ -67,7 +67,7 @@ export default function OpenLetterModal() {
             <p className="font-bold text-white">
               Yours in sovereign sound,<br />
               <span className="text-gold-400 font-black">The Downtown Radio Collective & Editorial Board</span><br />
-              <span className="text-xs text-zinc-400 font-mono">Red Horn • Ife, Osun State</span>
+              <span className="text-xs text-zinc-400 font-mono">Downtown Radio • Lagos & Ile-Ife, Nigeria</span>
             </p>
           </div>
         </div>

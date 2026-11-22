@@ -20,11 +20,11 @@ export default function EventsPitching() {
   const { events, openPitchModal, pitches } = useStore();
   const [filterCity, setFilterCity] = useState<string>('All');
 
-  const cities = ['All', 'Red Horn, Ife', 'Ikeja, Lagos', 'Victoria Island'];
+  const cities = ['All', 'Upcoming Showcases (TBA)', 'Ikeja, Lagos', 'Victoria Island'];
 
   const filteredEvents = events.filter(e => {
     if (filterCity === 'All') return true;
-    if (filterCity === 'Red Horn, Ife') return e.city.toLowerCase().includes('ife') || e.venue.toLowerCase().includes('red horn');
+    if (filterCity === 'Upcoming Showcases (TBA)') return e.status.includes('TBA') || e.city === 'TBA';
     return e.city.toLowerCase().includes(filterCity.toLowerCase());
   });
 
@@ -166,7 +166,7 @@ export default function EventsPitching() {
                       className="flex-1 sm:flex-initial px-4 py-3 rounded-xl font-bold text-xs sm:text-sm text-gold-400 bg-charcoal-800 hover:bg-charcoal-700 border border-gold-500/40 hover:border-gold-500 transition-colors flex items-center justify-center gap-1.5 shadow-sm"
                     >
                       <Ticket className="w-4 h-4 text-gold-400" />
-                      <span>Buy Tickets</span>
+                      <span>{event.status.includes('TBA') ? 'Event Status (TBA)' : 'Buy Tickets'}</span>
                     </button>
 
                     <button

@@ -27,9 +27,9 @@ export default function StructuredData() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Red Horn Palace Grounds & Lagos Sound Labs',
-      addressLocality: 'Ile-Ife',
-      addressRegion: 'Osun State',
+      streetAddress: 'Downtown Radio Sound Labs & Broadcast Hub',
+      addressLocality: 'Lagos & Ile-Ife',
+      addressRegion: 'Nigeria',
       addressCountry: 'NG',
     },
     contactPoint: {
@@ -48,19 +48,15 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'MusicEvent',
     '@id': `${baseUrl}/events#royal-rave`,
-    name: 'Royal Rave Rooftop Gathering (Downtown Radio Festival)',
-    startDate: '2026-11-14T21:00:00+01:00',
-    endDate: '2026-11-15T05:00:00+01:00',
-    eventStatus: 'https://schema.org/EventScheduled',
+    name: 'Royal Rave Festival (Downtown Radio Showcase)',
+    eventStatus: 'https://schema.org/EventPostponed',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
       '@type': 'Place',
-      name: 'Red Horn Rooftop & Palace Archways',
+      name: 'To Be Announced (TBA)',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Red Horn Palace Deck',
-        addressLocality: 'Ile-Ife',
-        addressRegion: 'Osun State',
+        addressLocality: 'Nigeria',
         addressCountry: 'NG',
       },
     },
@@ -187,10 +183,10 @@ export default function StructuredData() {
       },
       {
         '@type': 'Question',
-        name: 'When and where is the Royal Rave Rooftop Gathering?',
+        name: 'When and where is the Royal Rave Showcase?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Royal Rave Rooftop Gathering takes place on Saturday, 14th November 2026, from 9:00 PM to 5:00 AM WAT at Red Horn, Ile-Ife, Osun State, Nigeria.',
+          text: 'The Royal Rave Showcase date and venue are To Be Announced (TBA). Registration for early priority notice and performance slot pitching is open on the platform.',
         },
       },
       {

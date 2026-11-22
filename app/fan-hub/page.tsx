@@ -51,7 +51,7 @@ export default function FanHubPage() {
             className="px-3 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-charcoal-800 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-1.5"
           >
             <Ticket className="w-3.5 h-3.5 text-amber-400" />
-            <span>Royal Rave Tickets</span>
+            <span>Event Waitlist (TBA)</span>
           </Link>
         </div>
       </div>
@@ -78,17 +78,17 @@ export default function FanHubPage() {
               <span>LIVE GATHERING</span>
             </div>
             <h3 className="text-lg font-black text-white mb-2 leading-tight">
-              Royal Rave Rooftop Gathering
+              Royal Rave Showcase
             </h3>
             <p className="text-xs text-zinc-300 leading-relaxed mb-4">
-              Red Horn, Ife, Osun State. Saturday, 14th November (9PM — 5AM). Experience the sovereign underground sound live under palace lights.
+              Status: To Be Announced (TBA). Experience the sovereign underground sound live. Keep your notifications active for upcoming date and venue announcements.
             </p>
             <Link
               href="/events#ticket-booking-section"
               className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center justify-center gap-1.5"
             >
               <Ticket className="w-3.5 h-3.5 text-charcoal-950" />
-              <span>🎟️ Secure Festival Tickets</span>
+              <span>🎟️ Event Status & Waitlist (TBA)</span>
             </Link>
           </div>
         </div>

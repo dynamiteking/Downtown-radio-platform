@@ -154,7 +154,7 @@ export default function ThreeStepsGuide() {
               Amplify one universal link
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              Drop it on WhatsApp groups, your Instagram bio, or on printed stickers at Red Horn. One link plays instantly in any mobile browser with zero app installation.
+              Drop it on WhatsApp groups, your Instagram bio, or on printed stickers at shows and pop-ups. One link plays instantly in any mobile browser with zero app installation.
             </p>
           </div>
         </div>

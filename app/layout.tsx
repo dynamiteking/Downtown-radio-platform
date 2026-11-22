@@ -28,11 +28,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Downtown Radio — Royal Rave Festival & African Independent Music Ecosystem',
+    default: 'Downtown Radio — African Independent Music Ecosystem & Live Showcases',
     template: '%s | Downtown Radio (101.4 FM WAT)',
   },
   description:
-    'Official platform of Downtown Radio (101.4 FM WAT). Home of the Royal Rave Rooftop Gathering at Red Horn, Ife (Sat, Nov 14, 2026). Stream uncompressed Alté & Afro-fusion, tip indie artists directly in Naira with 100% payout, and distribute music to 20+ global DSPs.',
+    'Official platform of Downtown Radio (101.4 FM WAT). Stream uncompressed Alté & Afro-fusion, tip indie artists directly in Naira with 100% payout, distribute music to 20+ global DSPs, and explore upcoming live activations (Royal Rave Status: TBA).',
   applicationName: 'Downtown Radio',
   authors: [
     { name: 'DK (CEO & Pioneer)', url: `${siteUrl}/about` },
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     'Downtown Radio',
     'Downtown Radio 101.4 FM',
     'Royal Rave Festival',
-    'Royal Rave Rooftop Gathering',
-    'Red Horn Ife',
-    'Ile-Ife Osun State',
+    'Royal Rave Showcase',
+    'Ile-Ife',
+    'Lagos Independent Music',
     'African Independent Music',
     'Alté',
     'Afro-Fusion',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Downtown Radio — The Sovereign Frequency for African Independent Sound',
     description:
-      'Stream uncompressed independent African music, tip artists directly in Naira, lock tickets for the Royal Rave Festival at Red Horn, Ife (Nov 14), and distribute to 20+ global DSPs with 100% master retention.',
+      'Stream uncompressed independent African music, tip artists directly in Naira, pitch unreleased tracks for upcoming showcases (Royal Rave Status: TBA), and distribute to 20+ global DSPs with 100% master retention.',
     url: siteUrl,
     siteName: 'Downtown Radio',
     images: [
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
         url: '/images/royal-rave-poster-updated.jpg',
         width: 1200,
         height: 630,
-        alt: 'Downtown Radio — Royal Rave Rooftop Gathering at Red Horn, Ife',
+        alt: 'Downtown Radio — Royal Rave Showcase Poster (Status: TBA)',
       },
       {
         url: '/images/downtown-radio-logo.jpg',
@@ -95,9 +95,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Downtown Radio — Royal Rave Festival & Indie Music Ecosystem',
+    title: 'Downtown Radio — Royal Rave Showcase & Indie Music Ecosystem',
     description:
-      'Stream raw Alté music, tip indie artists directly in Naira, lock Royal Rave Festival tickets (Red Horn, Ife — Nov 14), and distribute master recordings worldwide.',
+      'Stream raw Alté music, tip indie artists directly in Naira, explore upcoming festival showcases (Royal Rave Status: TBA), and distribute master recordings worldwide.',
     creator: '@downtownradio_ng',
     images: ['/images/royal-rave-poster-updated.jpg'],
   },

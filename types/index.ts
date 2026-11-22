@@ -51,7 +51,7 @@ export interface EventItem {
   city: string;
   capacity: string;
   bannerUrl: string;
-  status: 'Open for Pitching' | 'Reviewing' | 'Sold Out' | 'Upcoming';
+  status: 'Open for Pitching' | 'Reviewing' | 'Sold Out' | 'Upcoming' | 'To Be Announced (TBA)';
   pitchDeadline: string;
   slotsAvailable: number;
   description: string;

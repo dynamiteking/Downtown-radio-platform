@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Artist Portal & Creator Incubation Terminal',
   description:
-    'Upload uncompressed master audio (WAV), track real-time fan tips in Naira with 100% payout, submit festival performance pitches for Red Horn (Royal Rave), and distribute worldwide to 20+ DSPs.',
+    'Upload uncompressed master audio (WAV), track real-time fan tips in Naira with 100% payout, submit festival performance pitches for upcoming showcases (Royal Rave), and distribute worldwide to 20+ DSPs.',
   alternates: {
     canonical: '/artist-dashboard',
   },

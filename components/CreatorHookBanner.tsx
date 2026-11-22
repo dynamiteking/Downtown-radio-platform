@@ -68,7 +68,7 @@ export default function CreatorHookBanner() {
               <strong className="text-white font-bold">
                 <span className="text-gold-400">Downtown Radio</span> rebuilds the bridge between genuine sound and direct community support.
               </strong>{' '}
-              We empower African innovators to turn 50 true believers into a sustainable music career today — through instant Naira fan transfers, 100% master ownership retention, and stage slots at our signature gatherings like the upcoming <em>Royal Rave Festival at Red Horn, Ife (Saturday, 14th November)</em>.
+              We empower African innovators to turn 50 true believers into a sustainable music career today — through instant Naira fan transfers, 100% master ownership retention, and stage slots at signature Downtown gatherings and festival activations like the Royal Rave Showcase (Status: TBA).
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function CreatorHookBanner() {
                 className="px-5 py-3.5 rounded-2xl font-bold text-xs sm:text-sm text-zinc-200 hover:text-white bg-charcoal-800/80 hover:bg-charcoal-700 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4 text-amber-400" />
-                <span>Pitch Royal Rave Stage</span>
+                <span>Pitch for Future Festival Slots</span>
               </button>
             )}
 

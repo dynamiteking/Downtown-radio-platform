@@ -94,7 +94,7 @@ export default function ArtistDashboardPage() {
               className="px-3 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-charcoal-800 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-1.5"
             >
               <Calendar className="w-3.5 h-3.5 text-amber-400" />
-              <span>Pitch Royal Rave Stage</span>
+              <span>Pitch Showcase Stage</span>
             </button>
           )}
 

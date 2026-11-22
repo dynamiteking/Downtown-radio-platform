@@ -74,8 +74,8 @@ const EVENT_SLIDES: Slide[] = [
     tag: 'ROOFTOP SOUNDSTAGE JAM',
     title: 'Intimate Rooftop Sessions & Sound Systems',
     subtitle: 'Celebrating independent African music culture in safe, elevated spaces where original sound thrives without commercial restrictions.',
-    location: 'Red Horn Sound System • Osun State',
-    date: 'Palace Courtyard Live',
+    location: 'Downtown Sound System • Nigeria',
+    date: 'Rooftop Sessions Live',
     highlight: 'Unreleased Track Debuts',
   },
 ];
@@ -210,7 +210,7 @@ export default function EventSlideshow() {
             className="px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center gap-1.5"
           >
             <Ticket className="w-3.5 h-3.5 text-charcoal-950" />
-            <span>Join Gathering at Red Horn</span>
+            <span>Join Gathering Waitlist</span>
           </button>
 
           <div className="flex items-center gap-1.5">
