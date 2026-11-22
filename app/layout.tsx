@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     'Downtown Radio 101.4 FM',
     'Royal Rave Festival',
     'Royal Rave Showcase',
-    'Ile-Ife',
     'Lagos Independent Music',
     'African Independent Music',
     'Alté',
