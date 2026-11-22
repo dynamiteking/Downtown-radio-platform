@@ -34,7 +34,7 @@ export default function TippingModal() {
 
   if (!tippingModalOpen || !tippingTrack) return null;
 
-  const quickAmounts = [500, 1000, 5000, 10000];
+  const quickAmounts = [500, 1000, 2500, 5000];
 
   const effectiveAmount = isCustom ? (parseInt(customAmount, 10) || 0) : selectedAmount;
 
@@ -254,9 +254,9 @@ export default function TippingModal() {
                 )}
               </button>
 
-              <div className="mt-3 flex items-center justify-center gap-2 text-[11px] text-zinc-500">
-                <Lock className="w-3.5 h-3.5 text-emerald-400" />
-                <span>100% of tips route directly to artist verified bank accounts via Central Bank of Nigeria authorized switches.</span>
+              <div className="mt-3 flex items-center justify-center gap-2 text-[11px] text-zinc-400 text-center">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <span>Direct Naira transfer via Paystack & Flutterwave to Nigerian banks (Kuda, GTB, Zenith, OPay).</span>
               </div>
             </div>
 

@@ -14,6 +14,7 @@ import NotificationToast from '../components/NotificationToast';
 import Floating3DGraphics from '../components/Floating3DGraphics';
 import Footer from '../components/Footer';
 import StructuredData from '../components/StructuredData';
+import PWAInstallPrompt from '../components/PWAInstallPrompt';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://downtownradio.live';
 
@@ -28,11 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Downtown Radio — African Independent Music Ecosystem & Live Showcases',
+    default: 'Downtown Radio — African Independent Music, Naira Tipping & Live Events',
     template: '%s | Downtown Radio (101.4 FM WAT)',
   },
   description:
-    'Official platform of Downtown Radio (101.4 FM WAT). Stream uncompressed Alté & Afro-fusion, tip indie artists directly in Naira with 100% payout, distribute music to 20+ global DSPs, and explore upcoming live activations (Royal Rave Status: TBA).',
+    'Official platform of Downtown Radio (101.4 FM WAT). Stream uncompressed Alté & Afro-fusion, tip indie artists directly in Naira with 100% payout, distribute music to 20+ global DSPs, and explore upcoming live activations (Showcase Status: TBE).',
   applicationName: 'Downtown Radio',
   authors: [
     { name: 'DK (CEO & Pioneer)', url: `${siteUrl}/about` },
@@ -69,24 +70,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  manifest: '/manifest.json',
   openGraph: {
-    title: 'Downtown Radio — The Sovereign Frequency for African Independent Sound',
+    title: 'Downtown Radio — African Independent Music, Naira Tipping & Live Events',
     description:
-      'Stream uncompressed independent African music, tip artists directly in Naira, pitch unreleased tracks for upcoming showcases (Royal Rave Status: TBA), and distribute to 20+ global DSPs with 100% master retention.',
+      'Stream uncompressed independent African music, tip artists directly in Naira, pitch unreleased tracks for upcoming showcases (Dates, Locations & Flyers: TBE), and distribute to 20+ global DSPs with 100% master retention.',
     url: siteUrl,
     siteName: 'Downtown Radio',
     images: [
-      {
-        url: '/images/royal-rave-poster-updated.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Downtown Radio — Royal Rave Showcase Poster (Status: TBA)',
-      },
       {
         url: '/images/downtown-radio-logo.jpg',
         width: 800,
         height: 800,
         alt: 'Downtown Radio Official Logo',
+      },
+      {
+        url: '/images/atwn/atwn-cover.jpg',
+        width: 1024,
+        height: 1024,
+        alt: 'Downtown Radio Official Master Cover',
       },
     ],
     locale: 'en_NG',
@@ -94,11 +96,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Downtown Radio — Royal Rave Showcase & Indie Music Ecosystem',
+    title: 'Downtown Radio — African Independent Music, Naira Tipping & Live Events',
     description:
-      'Stream raw Alté music, tip indie artists directly in Naira, explore upcoming festival showcases (Royal Rave Status: TBA), and distribute master recordings worldwide.',
+      'Stream raw Alté music, tip indie artists directly in Naira, explore upcoming festival showcases (Status: TBE), and distribute master recordings worldwide.',
     creator: '@downtownradio_ng',
-    images: ['/images/royal-rave-poster-updated.jpg'],
+    images: ['/images/downtown-radio-logo.jpg'],
   },
   robots: {
     index: true,
@@ -136,7 +138,8 @@ export default function RootLayout({
             {/* Immersive 3D Scroll Graphics & Ambient Particles */}
             <Floating3DGraphics />
 
-            {/* Notification Toasts */}
+            {/* Notification Toasts & PWA Install Prompt */}
+            <PWAInstallPrompt />
             <NotificationToast />
 
             {/* Main Application Body with Bottom Safe Area for Floating Player */}

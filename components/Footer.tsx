@@ -56,9 +56,9 @@ export default function Footer() {
               Empowering African independent recording artists through uncompressed streaming, direct fan tipping in Naira, and curated live festival showcases.
             </p>
 
-            <div className="text-[11px] text-zinc-400 font-mono flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Broadcast Node: 101.4 FM WAT • Sovereign Frequency</span>
+            <div className="text-[11px] text-zinc-300 font-mono flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Broadcasting Node: Ile-Ife & Lagos • 101.4 FM WAT</span>
             </div>
 
             {/* Official Social Handles */}
@@ -129,15 +129,23 @@ export default function Footer() {
                   className="hover:text-gold-400 transition-colors text-gold-400 font-semibold flex items-center gap-1"
                 >
                   <span>Royal Rave Showcase</span>
-                  <span className="text-[9px] bg-gold-500/20 px-1.5 py-0.2 rounded border border-gold-500/30">TBA</span>
+                  <span className="text-[9px] bg-gold-500/20 px-1.5 py-0.2 rounded border border-gold-500/30">TBE</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/events#ticket-booking-section"
+                  href="/events#tbe-alert"
                   className="hover:text-gold-400 transition-colors"
                 >
-                  Event Status & Waitlist (TBA)
+                  Event Status & TBE Alert
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about#manifesto"
+                  className="hover:text-gold-400 transition-colors text-amber-400 font-semibold"
+                >
+                  Artist Manifesto
                 </Link>
               </li>
               <li>

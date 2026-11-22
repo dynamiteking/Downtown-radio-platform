@@ -30,18 +30,18 @@ export default function HeroBanner() {
   const slides = [
     {
       id: 'slide-event',
-      badge: 'DOWNTOWN RADIO PRESENTS • STATUS: TO BE ANNOUNCED (TBA)',
+      badge: 'DOWNTOWN RADIO PRESENTS • STATUS: TBE',
       badgeIcon: <Flame className="w-3.5 h-3.5 text-gold-400" />,
       title: 'Royal Rave Festival',
-      artist: 'Official Flyer • Status: To Be Announced (TBA)',
-      subtitle: 'The all-night indie & alté celebration. Signature sound systems, electric DJ sets, and intimate performances from dusk to dawn. Status is To Be Announced (TBA).',
-      image: '/images/royal-rave-poster.jpg',
-      tag: 'Status: To Be Announced (TBA)',
-      posterThumb: '/images/royal-rave-poster.jpg',
+      artist: 'Live Showcase • Status: TBE (To Be Announced)',
+      subtitle: 'The all-night indie & alté celebration. Signature sound systems, electric DJ sets, and intimate performances. Date: TBE • Location: TBE • Flyer: TBE.',
+      image: '/images/gallery/downtown-event-2-rave-crowd.jpg',
+      tag: 'Status: TBE',
+      posterThumb: null,
       stats: [
-        { label: 'Status', value: 'TBA' },
-        { label: 'Date', value: 'TBA' },
-        { label: 'Slots', value: '4 Open Slots' },
+        { label: 'Status', value: 'TBE' },
+        { label: 'Date', value: 'TBE' },
+        { label: 'Location', value: 'TBE' },
       ],
       actionType: 'event',
       event: featuredEvent,
@@ -247,25 +247,57 @@ export default function HeroBanner() {
 
       </div>
 
-      {/* Floating Poster Preview for Festival Slide (Large Screen) */}
-      {slide.posterThumb && (
+      {/* Floating Preview Card for Festival Slide (Large Screen) */}
+      {slide.actionType === 'event' && (
         <div 
           onClick={() => setActiveTab('events')}
-          className="hidden lg:block absolute right-16 top-1/2 -translate-y-1/2 z-20 w-60 rounded-2xl overflow-hidden border-2 border-gold-500 shadow-gold-glow-lg transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer bg-charcoal-900"
+          className="hidden lg:flex flex-col justify-between absolute right-16 top-1/2 -translate-y-1/2 z-20 w-64 h-80 rounded-3xl p-5 border-2 border-gold-500/50 shadow-gold-glow-lg bg-charcoal-900/95 backdrop-blur-xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer"
         >
-          <img
-            src={slide.posterThumb}
-            alt="Official Royal Rave Festival Poster"
-            className="w-full h-auto object-cover"
-          />
-          <div className="p-2.5 bg-charcoal-950/95 border-t border-gold-500/40 text-center">
-            <span className="text-[10px] font-black uppercase tracking-wider text-gold-400 block">
-              STATUS: TO BE ANNOUNCED (TBA)
-            </span>
-            <span className="text-[9px] text-zinc-400">
-              Official Flyer • Status: TBA
-            </span>
-          </div>
+          {slide.posterThumb ? (
+            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+              <img
+                src={slide.posterThumb}
+                alt="Official Event Poster"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ) : (
+            <div className="flex flex-col justify-between h-full text-left space-y-3">
+              <div className="flex items-center justify-between pb-2 border-b border-white/10">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-gold-400 font-bold">
+                  BROADCAST ARCHIVE
+                </span>
+                <span className="px-2 py-0.5 rounded-full text-[9px] font-black uppercase bg-gold-500/20 text-gold-300 border border-gold-500/30">
+                  STATUS: TBE
+                </span>
+              </div>
+              
+              <div className="p-3 rounded-2xl bg-charcoal-950/80 border border-gold-500/20 space-y-2 text-[11px] font-mono">
+                <div className="text-zinc-400">
+                  <span className="text-gold-400 font-bold block text-[10px]">EVENT TITLE:</span>
+                  <span className="text-white font-bold">{slide.title}</span>
+                </div>
+                <div className="text-zinc-400">
+                  <span className="text-gold-400 font-bold block text-[10px]">DATE & TIME:</span>
+                  <span className="text-amber-300 font-bold">Date: TBE</span>
+                </div>
+                <div className="text-zinc-400">
+                  <span className="text-gold-400 font-bold block text-[10px]">VENUE / CITY:</span>
+                  <span className="text-amber-300 font-bold">Location: TBE</span>
+                </div>
+                <div className="text-zinc-400">
+                  <span className="text-gold-400 font-bold block text-[10px]">FLYER STATUS:</span>
+                  <span className="text-zinc-400 font-medium">Flyer: TBE</span>
+                </div>
+              </div>
+
+              <div className="p-2 rounded-xl bg-gold-500/10 border border-gold-500/30 text-center">
+                <span className="text-[10px] font-bold text-gold-400">
+                  Click to Join TBE Priority Alert
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       )}
 

@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
 import confetti from 'canvas-confetti';
+import { siteConfig, isEventVerified } from '../src/config/site';
 import { 
   Ticket, 
   Calendar, 
-  MapPin, 
   Clock, 
   ShieldCheck, 
   Sparkles, 
@@ -16,10 +16,12 @@ import {
   Flame, 
   Users, 
   Download, 
-  Share2,
   CheckCircle2,
-  Zap,
-  ArrowRight
+  BellRing,
+  MapPin,
+  Send,
+  Radio,
+  FileQuestion
 } from 'lucide-react';
 
 interface TicketTier {
@@ -74,166 +76,171 @@ const TICKET_TIERS: TicketTier[] = [
 
 export default function TicketBookingSection() {
   const { addToast } = useStore();
-  const [selectedTier, setSelectedTier] = useState<TicketTier>(TICKET_TIERS[1]);
-  const [quantity, setQuantity] = useState(1);
+  const mainEvent = siteConfig.events[0];
+  const isVerified = isEventVerified(mainEvent);
+
+  // Form states for TBE Alert signup or Verified booking
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState<'paystack' | 'flutterwave' | 'bank-transfer'>('paystack');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [selectedTier, setSelectedTier] = useState<TicketTier>(TICKET_TIERS[1]);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [bookedTicket, setBookedTicket] = useState<{
-    ticketId: string;
-    tier: TicketTier;
-    qty: number;
-    total: number;
+
+  // Confirmed alert / ticket state
+  const [alertRegistered, setAlertRegistered] = useState<{
+    id: string;
     name: string;
-    date: string;
+    email: string;
+    whatsapp: string;
+    tier: string;
   } | null>(null);
 
-  // Live countdown to Saturday, Nov 14, 2026 21:00:00
-  const [timeLeft, setTimeLeft] = useState({ days: 16, hours: 18, mins: 42, secs: 30 });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.secs > 0) return { ...prev, secs: prev.secs - 1 };
-        if (prev.mins > 0) return { ...prev, mins: 59, secs: 59 };
-        if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, mins: 59, secs: 59 };
-        if (prev.days > 0) return { ...prev, days: prev.days - 1, hours: 23, mins: 59, secs: 59 };
-        return prev;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const totalAmount = selectedTier.price * quantity;
-
-  const handleCompleteBooking = (e: React.FormEvent) => {
+  const handleRegisterTbeAlert = (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !email.trim()) {
-      addToast('Missing Details', 'Please provide your name and email to issue tickets.', 'info');
+      addToast('Missing Details', 'Please provide your name and email for TBE alerts.', 'info');
       return;
     }
 
     setIsProcessing(true);
     setTimeout(() => {
       setIsProcessing(false);
-      const ticketId = `RR-PASS-${Math.floor(100000 + Math.random() * 900000)}`;
-      setBookedTicket({
-        ticketId,
-        tier: selectedTier,
-        qty: quantity,
-        total: totalAmount,
+      const alertId = `TBE-${Math.floor(100000 + Math.random() * 900000)}`;
+      setAlertRegistered({
+        id: alertId,
         name: fullName,
-        date: 'Saturday, 14th November 2026',
+        email: email,
+        whatsapp: whatsapp || 'Not provided',
+        tier: selectedTier.name,
       });
 
       try {
         confetti({
-          particleCount: 100,
-          spread: 80,
+          particleCount: 80,
+          spread: 70,
           origin: { y: 0.6 },
-          colors: ['#FF9F1C', '#FFD166', '#FFFFFF', '#E63946'],
+          colors: ['#FF9F1C', '#FFD166', '#FFFFFF', '#10B981'],
         });
       } catch (err) {}
 
       addToast(
-        'Ticket Confirmed!',
-        `Your pass for Royal Rave Festival (#${ticketId}) has been generated. Confirmation sent to ${email}.`,
+        'TBE Alert Locked In!',
+        `You will receive immediate WhatsApp & Email alerts the moment official dates, locations, and flyers are announced.`,
         'gold'
       );
-    }, 1200);
+    }, 1000);
   };
 
   return (
     <section id="ticket-booking-section" className="my-16 scroll-mt-24">
+      <div id="tbe-alert" className="scroll-mt-24" />
       
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-12">
+      <div className="text-center max-w-3xl mx-auto mb-10">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-xs font-bold uppercase tracking-wider text-gold-400 mb-3 shadow-gold-glow">
-          <Ticket className="w-4 h-4 text-gold-400" />
-          <span>OFFICIAL FESTIVAL FLYER • STATUS: TO BE ANNOUNCED (TBA)</span>
+          <BellRing className="w-4 h-4 text-gold-400" />
+          <span>OFFICIAL EVENT STATUS: TBE (TO BE ANNOUNCED)</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-          Royal Rave Festival
+          {mainEvent.title}
         </h2>
-        <p className="text-sm sm:text-base text-zinc-300 mt-2">
-          Status: To Be Announced (TBA) • Priority Pass & Early Notification
+        <p className="text-sm sm:text-base text-zinc-300 mt-2 font-normal">
+          Date: TBE • Location: TBE • Flyer: TBE • Priority Notification Alert List
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        {/* LEFT COLUMN: Flier Showcase & Event Details (5 Cols) */}
+        {/* ========================================================= */}
+        {/* LEFT COLUMN: Event Status Card (NO UNVERIFIED FLYER IMAGE)  */}
+        {/* ========================================================= */}
         <div className="lg:col-span-5 space-y-6">
           
-          {/* Festival Flier Card with Status TBA */}
-          <div className="rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-gold-glow-lg bg-charcoal-900 relative group">
+          <div className="rounded-3xl overflow-hidden border-2 border-gold-500/40 shadow-gold-glow-lg bg-charcoal-900 relative">
             
-            {/* The Official Poster Flyer */}
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-charcoal-950">
-              <img
-                src="/images/royal-rave-poster.jpg"
-                alt="Royal Rave Festival Official Flyer — Status: To Be Announced (TBA)"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-
-              {/* Verified Badge Overlay */}
-              <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-charcoal-950/85 backdrop-blur-md border border-gold-500/40 text-[11px] font-black uppercase tracking-wider text-gold-400 flex items-center gap-1.5 shadow-md">
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                <span>STATUS: TO BE ANNOUNCED (TBA)</span>
+            {/* When event is verified, render flyer; when unverified (TBE), render broadcast aesthetic card (NO FLYER) */}
+            {isVerified && mainEvent.flyerUrl ? (
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-charcoal-950">
+                <img
+                  src={mainEvent.flyerUrl}
+                  alt={`${mainEvent.title} Verified Flyer`}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
-            </div>
+            ) : (
+              /* CLEAN BROADCAST CASSETTE ARCHIVE CARD — NO UNVERIFIED FLYERS */
+              <div className="relative p-7 sm:p-8 bg-gradient-to-b from-charcoal-850 via-charcoal-900 to-charcoal-950 flex flex-col justify-between min-h-[360px] overflow-hidden">
+                {/* Background Ambient Glow */}
+                <div className="absolute top-0 right-0 w-48 h-48 bg-gold-500/10 rounded-full blur-2xl pointer-events-none" />
 
-            {/* Event Summary Bar below poster */}
-            <div className="p-5 bg-charcoal-850 border-t border-gold-500/30 space-y-3">
-              <div className="flex items-center justify-between text-xs">
-                <div className="flex items-center space-x-2 text-gold-400 font-bold">
-                  <Calendar className="w-4 h-4" />
-                  <span>Date: To Be Announced (TBA)</span>
-                </div>
-                <div className="flex items-center space-x-1.5 text-zinc-300 font-mono text-[11px]">
-                  <Clock className="w-3.5 h-3.5 text-gold-400" />
-                  <span>Time: TBA</span>
-                </div>
-              </div>
-
-              {/* Status Update Card */}
-              <div className="pt-3 border-t border-white/5 space-y-2">
-                <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="text-zinc-400 uppercase font-bold text-[10px]">EVENT STATUS</span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 font-bold text-[10px] border border-gold-500/30">
-                    TO BE ANNOUNCED (TBA)
+                {/* Card Top Pill */}
+                <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-4">
+                  <div className="flex items-center gap-2">
+                    <Radio className="w-4 h-4 text-gold-400" />
+                    <span className="text-xs font-mono font-bold tracking-widest text-zinc-400 uppercase">
+                      BROADCAST SHOWCASE
+                    </span>
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-gold-500 text-charcoal-950">
+                    STATUS: TBE
                   </span>
                 </div>
-                <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  We are no longer hosting Royal Rave. The official flyer is locked in and future updates will be announced directly on this page.
-                </p>
+
+                {/* Center Visual Lockup */}
+                <div className="my-8 text-center space-y-3">
+                  <div className="w-16 h-16 rounded-2xl bg-charcoal-800 border-2 border-gold-500/40 mx-auto flex items-center justify-center text-gold-400 shadow-gold-glow">
+                    <FileQuestion className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-white">
+                    Official Flyer: TBE
+                  </h3>
+                  <p className="text-xs text-zinc-400 max-w-sm mx-auto leading-relaxed">
+                    Per our critical verification protocol, event flyers, exact venues, and show dates are held as <strong className="text-gold-400 font-semibold">TBE (To Be Announced)</strong> until final palace & city permits are locked.
+                  </p>
+                </div>
+
+                {/* Bottom TBE Metadata Grid */}
+                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-white/10 text-xs font-mono">
+                  <div className="bg-charcoal-800/60 p-2.5 rounded-xl border border-white/5">
+                    <span className="text-zinc-500 block text-[10px] uppercase">EVENT DATE</span>
+                    <strong className="text-gold-400 font-bold">DATE: TBE</strong>
+                  </div>
+                  <div className="bg-charcoal-800/60 p-2.5 rounded-xl border border-white/5">
+                    <span className="text-zinc-500 block text-[10px] uppercase">EVENT LOCATION</span>
+                    <strong className="text-gold-400 font-bold">LOCATION: TBE</strong>
+                  </div>
+                  <div className="bg-charcoal-800/60 p-2.5 rounded-xl border border-white/5">
+                    <span className="text-zinc-500 block text-[10px] uppercase">OFFICIAL FLYER</span>
+                    <strong className="text-zinc-300 font-bold">FLYER: TBE</strong>
+                  </div>
+                  <div className="bg-charcoal-800/60 p-2.5 rounded-xl border border-white/5">
+                    <span className="text-zinc-500 block text-[10px] uppercase">SHOWCASE SLOTS</span>
+                    <strong className="text-emerald-400 font-bold">4 OPEN SLOTS</strong>
+                  </div>
+                </div>
+
               </div>
+            )}
 
+            {/* Micro-Notice below status card */}
+            <div className="p-4 bg-charcoal-850/90 border-t border-gold-500/20 text-[11px] text-zinc-400 flex items-start gap-2">
+              <ShieldCheck className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
+              <span>
+                Registering below locks your priority position for early ticket release and artist pitch drop announcements.
+              </span>
             </div>
 
-          </div>
-
-          {/* Quick Notice */}
-          <div className="p-4 rounded-2xl bg-charcoal-850/70 border border-white/5 text-xs text-zinc-400 space-y-1">
-            <div className="flex items-center gap-1.5 text-white font-bold">
-              <ShieldCheck className="w-4 h-4 text-gold-400" />
-              <span>Priority Notification & Waitlist Guarantee</span>
-            </div>
-            <p>
-              Registering below locks your priority tier on the announcement waitlist. You will receive private SMS and email notices the moment ticket booking goes live.
-            </p>
           </div>
 
         </div>
 
-        {/* RIGHT COLUMN: Ticket Tier Selection & Booking Checkout (7 Cols) */}
+        {/* ========================================================= */}
+        {/* RIGHT COLUMN: GET NOTIFIED (TBE ALERT) SIGNUP FORM        */}
+        {/* ========================================================= */}
         <div className="lg:col-span-7">
           
-          {bookedTicket ? (
-            /* BOOKING SUCCESS VOUCHER PASS */
+          {alertRegistered ? (
+            /* TBE ALERT CONFIRMATION PASS */
             <div className="p-6 sm:p-8 rounded-3xl bg-charcoal-850 border-2 border-emerald-500/50 shadow-2xl space-y-6 animate-fade-in text-left">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center space-x-3">
@@ -242,15 +249,15 @@ export default function TicketBookingSection() {
                   </div>
                   <div>
                     <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 block">
-                      PAYMENT CONFIRMED • PASS ISSUED
+                      PRIORITY REGISTERED • TBE ALERT ACTIVE
                     </span>
                     <h3 className="text-xl font-black text-white">
-                      Royal Rave Festival Pass
+                      Royal Rave Festival Showcase
                     </h3>
                   </div>
                 </div>
                 <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 border border-gold-500/40">
-                  {bookedTicket.ticketId}
+                  #{alertRegistered.id}
                 </span>
               </div>
 
@@ -258,16 +265,16 @@ export default function TicketBookingSection() {
               <div className="p-6 rounded-2xl bg-charcoal-900 border border-gold-500/40 relative overflow-hidden space-y-4">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="space-y-1 text-center sm:text-left">
-                    <div className="text-xs font-mono text-gold-400 uppercase font-bold">Guest Attendee</div>
-                    <div className="text-lg font-black text-white">{bookedTicket.name}</div>
-                    <div className="text-xs text-zinc-400">{bookedTicket.tier.name} (x{bookedTicket.qty})</div>
+                    <div className="text-xs font-mono text-gold-400 uppercase font-bold">Registered Patron</div>
+                    <div className="text-lg font-black text-white">{alertRegistered.name}</div>
+                    <div className="text-xs text-zinc-400">{alertRegistered.email}</div>
                   </div>
 
                   {/* QR Code Mock */}
                   <div className="p-3 bg-white rounded-2xl flex flex-col items-center shadow-lg">
-                    <QrCode className="w-20 h-20 text-charcoal-950" />
+                    <QrCode className="w-16 h-16 text-charcoal-950" />
                     <span className="text-[8px] font-mono text-zinc-900 font-bold mt-1">
-                      SCAN AT GATE
+                      TBE PRIORITY
                     </span>
                   </div>
                 </div>
@@ -275,11 +282,11 @@ export default function TicketBookingSection() {
                 <div className="grid grid-cols-2 gap-3 pt-3 border-t border-white/10 text-xs">
                   <div>
                     <span className="text-zinc-500 block text-[10px] uppercase font-mono">Date & Time</span>
-                    <strong className="text-zinc-200">To Be Announced (TBA)</strong>
+                    <strong className="text-gold-400">STATUS: TBE</strong>
                   </div>
                   <div>
-                    <span className="text-zinc-500 block text-[10px] uppercase font-mono">Event Status</span>
-                    <strong className="text-gold-400">To Be Announced (TBA)</strong>
+                    <span className="text-zinc-500 block text-[10px] uppercase font-mono">Location & Flyer</span>
+                    <strong className="text-gold-400">STATUS: TBE</strong>
                   </div>
                 </div>
               </div>
@@ -287,226 +294,127 @@ export default function TicketBookingSection() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button
-                  onClick={() => addToast('Pass Downloaded', 'Digital ticket saved to your device.', 'gold')}
+                  onClick={() => addToast('Voucher Saved', 'Your TBE priority alert pass has been saved.', 'gold')}
                   className="w-full sm:flex-1 py-3 px-4 rounded-xl font-bold text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow flex items-center justify-center gap-2"
                 >
                   <Download className="w-4 h-4 text-charcoal-950" />
-                  <span>Download Pass (PDF)</span>
+                  <span>Save Priority Pass (PDF)</span>
                 </button>
                 <button
-                  onClick={() => setBookedTicket(null)}
+                  onClick={() => setAlertRegistered(null)}
                   className="w-full sm:w-auto py-3 px-5 rounded-xl font-semibold text-xs text-zinc-300 bg-charcoal-800 hover:bg-charcoal-700 border border-white/10"
                 >
-                  Register Another Pass
+                  Register Another Attendee
                 </button>
               </div>
             </div>
           ) : (
-            /* TICKET PURCHASE FORM */
-            <div className="p-5 sm:p-8 rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-2xl space-y-6 w-full">
+            /* GET NOTIFIED (TBE ALERT) SIGNUP FORM */
+            <div className="p-6 sm:p-8 rounded-3xl bg-charcoal-850 border border-gold-500/30 shadow-2xl space-y-6 w-full text-left">
               
               <div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-[11px] font-bold text-gold-400 mb-2 font-mono">
+                  <BellRing className="w-3.5 h-3.5" />
+                  <span>EARLY ACCESS WAITLIST</span>
+                </div>
                 <h3 className="text-xl sm:text-2xl font-black text-white">
-                  Reserve Festival Priority Pass
+                  Get Notified (TBE Alert)
                 </h3>
-                <p className="text-xs text-zinc-400 mt-1">
-                  Status: To Be Announced (TBA). Lock your priority tier for early notification and guaranteed entry.
+                <p className="text-xs sm:text-sm text-zinc-400 mt-1 leading-relaxed">
+                  Lock in priority tier notification. The moment date, location, and official flyers are verified, you will receive private alerts via WhatsApp and Email before public release.
                 </p>
               </div>
 
-              {/* Tier Cards Selector */}
-              <div className="space-y-3 w-full">
-                {TICKET_TIERS.map(tier => {
-                  const isSelected = selectedTier.id === tier.id;
-                  return (
-                    <div
-                      key={tier.id}
-                      onClick={() => setSelectedTier(tier)}
-                      className={`p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer relative w-full ${
-                        isSelected
-                          ? 'bg-charcoal-900 border-gold-500 shadow-gold-glow'
-                          : 'bg-charcoal-900/60 border-white/5 hover:border-white/20'
-                      }`}
-                    >
-                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4">
-                        <div className="space-y-1">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-sm sm:text-base font-black text-white">
-                              {tier.name}
-                            </span>
-                            {tier.badge && (
-                              <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-gold-500 text-charcoal-950">
-                                {tier.badge}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-zinc-400 max-w-md">
-                            {tier.description}
-                          </p>
-                        </div>
-
-                        <div className="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end justify-between sm:justify-start gap-1 pt-1 sm:pt-0 border-t sm:border-t-0 border-white/5">
-                          <div className="text-base sm:text-xl font-black text-gold-400 font-mono">
-                            ₦{tier.price.toLocaleString()}
-                          </div>
-                          <span className="text-[10px] text-zinc-500 block">per pass</span>
-                        </div>
-                      </div>
-
-                      {/* Perks */}
-                      <div className="mt-3 pt-3 border-t border-white/5 flex flex-wrap gap-x-4 gap-y-1">
-                        {tier.perks.map((perk, idx) => (
-                          <div key={idx} className="flex items-center space-x-1.5 text-[11px] text-zinc-300">
-                            <Check className="w-3 h-3 text-gold-400 flex-shrink-0" />
-                            <span>{perk}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Quantity Counter */}
-              <div className="flex items-center justify-between p-4 rounded-2xl bg-charcoal-900 border border-white/5">
+              <form onSubmit={handleRegisterTbeAlert} className="space-y-4">
+                {/* Full Name */}
                 <div>
-                  <span className="text-xs font-bold text-white block">Number of Passes</span>
-                  <span className="text-[11px] text-zinc-400">Max 6 per transaction</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <button
-                    type="button"
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-8 h-8 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 text-white font-bold flex items-center justify-center transition-colors"
-                  >
-                    -
-                  </button>
-                  <span className="text-base font-bold font-mono text-gold-400 w-6 text-center">
-                    {quantity}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setQuantity(Math.min(6, quantity + 1))}
-                    className="w-8 h-8 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 text-white font-bold flex items-center justify-center transition-colors"
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-
-              {/* Attendee Info Form */}
-              <form onSubmit={handleCompleteBooking} className="space-y-4 pt-2">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-1">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={fullName}
-                      onChange={e => setFullName(e.target.value)}
-                      placeholder="e.g. Oluwaseun Adeleke"
-                      className="w-full px-4 py-2.5 rounded-xl bg-charcoal-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-gold-500 transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-1">
-                      Email Address (For QR Delivery) *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={email}
-                      onChange={e => setEmail(e.target.value)}
-                      placeholder="oluwaseun@gmail.com"
-                      className="w-full px-4 py-2.5 rounded-xl bg-charcoal-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-gold-500 transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-1">
-                    WhatsApp Phone Number (Optional SMS Delivery)
+                  <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5 font-mono">
+                    Your Full Name *
                   </label>
                   <input
-                    type="tel"
-                    value={phone}
-                    onChange={e => setPhone(e.target.value)}
-                    placeholder="+234 801 234 5678"
-                    className="w-full px-4 py-2.5 rounded-xl bg-charcoal-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-gold-500 transition-colors"
+                    type="text"
+                    required
+                    placeholder="e.g. Tunde Adeyemi"
+                    value={fullName}
+                    onChange={e => setFullName(e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 focus:border-gold-500 text-sm text-white placeholder-zinc-500 focus:outline-none transition-colors"
                   />
                 </div>
 
-                {/* Payment Gateway Toggle */}
-                <div className="space-y-2 pt-2">
-                  <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-400">
-                    Payment Gateway
+                {/* Email Address */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5 font-mono">
+                    Email Address *
                   </label>
-                  <div className="grid grid-cols-3 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethod('paystack')}
-                      className={`p-2.5 rounded-xl text-xs font-bold transition-all border text-center ${
-                        paymentMethod === 'paystack'
-                          ? 'bg-gold-500/15 border-gold-500 text-gold-400'
-                          : 'bg-charcoal-900 border-white/5 text-zinc-400 hover:text-white'
-                      }`}
-                    >
-                      Paystack
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethod('flutterwave')}
-                      className={`p-2.5 rounded-xl text-xs font-bold transition-all border text-center ${
-                        paymentMethod === 'flutterwave'
-                          ? 'bg-gold-500/15 border-gold-500 text-gold-400'
-                          : 'bg-charcoal-900 border-white/5 text-zinc-400 hover:text-white'
-                      }`}
-                    >
-                      Flutterwave
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethod('bank-transfer')}
-                      className={`p-2.5 rounded-xl text-xs font-bold transition-all border text-center ${
-                        paymentMethod === 'bank-transfer'
-                          ? 'bg-gold-500/15 border-gold-500 text-gold-400'
-                          : 'bg-charcoal-900 border-white/5 text-zinc-400 hover:text-white'
-                      }`}
-                    >
-                      Direct Bank
-                    </button>
+                  <input
+                    type="email"
+                    required
+                    placeholder="tunde@downtownradio.live"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 focus:border-gold-500 text-sm text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                  />
+                </div>
+
+                {/* WhatsApp Number */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5 font-mono">
+                    WhatsApp Number (for instant drop alert)
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="e.g. +234 803 123 4567"
+                    value={whatsapp}
+                    onChange={e => setWhatsapp(e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl bg-charcoal-900 border border-white/10 focus:border-gold-500 text-sm text-white placeholder-zinc-500 focus:outline-none transition-colors"
+                  />
+                </div>
+
+                {/* Notification Tier Preference */}
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2 font-mono">
+                    Preferred Tier (When Tickets Drop)
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    {TICKET_TIERS.map(tier => (
+                      <button
+                        key={tier.id}
+                        type="button"
+                        onClick={() => setSelectedTier(tier)}
+                        className={`p-3 rounded-xl text-left border transition-all text-xs ${
+                          selectedTier.id === tier.id
+                            ? 'bg-charcoal-900 border-gold-500 text-gold-300 shadow-sm'
+                            : 'bg-charcoal-900/60 border-white/5 text-zinc-400 hover:border-white/20'
+                        }`}
+                      >
+                        <div className="font-bold text-white truncate">{tier.name.split('(')[0]}</div>
+                        <div className="text-[10px] text-zinc-500 font-mono mt-0.5">Approx. ₦{tier.price.toLocaleString()}</div>
+                      </button>
+                    ))}
                   </div>
                 </div>
 
-                {/* Subtotal & Checkout Button */}
-                <div className="pt-4 border-t border-white/10 space-y-3">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-zinc-400">
-                      Total ({quantity}x {selectedTier.name}):
-                    </span>
-                    <span className="text-xl font-black text-gold-400 font-mono">
-                      ₦{totalAmount.toLocaleString()}
-                    </span>
-                  </div>
-
+                {/* Submit Action */}
+                <div className="pt-2">
                   <button
                     type="submit"
                     disabled={isProcessing}
-                    className="w-full py-4 rounded-2xl font-black text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="w-full py-4 px-6 rounded-2xl font-black text-xs sm:text-sm text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2"
                   >
                     {isProcessing ? (
-                      <span>Securing Your Passes...</span>
+                      <span>Locking in your alert...</span>
                     ) : (
                       <>
-                        <Sparkles className="w-4 h-4 fill-charcoal-950" />
-                        <span>Reserve Priority Pass (₦{totalAmount.toLocaleString()})</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <BellRing className="w-4 h-4 text-charcoal-950" />
+                        <span>Lock In My TBE Alert Notification</span>
                       </>
                     )}
                   </button>
                 </div>
+
+                <p className="text-[10px] text-zinc-500 text-center font-mono pt-1">
+                  🔒 Zero spam. Only 1 official drop alert sent when dates, locations & flyers are confirmed.
+                </p>
 
               </form>
 

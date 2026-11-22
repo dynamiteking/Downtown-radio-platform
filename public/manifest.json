@@ -1,0 +1,25 @@
+{
+  "name": "Downtown Radio",
+  "short_name": "Downtown",
+  "description": "The Sovereign Frequency for African Independent Sound. Stream raw alté releases, tip creators directly in Naira, lock festival tickets, or scale your recording career.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0D0F12",
+  "theme_color": "#FF9F1C",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "/images/downtown-radio-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/downtown-radio-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

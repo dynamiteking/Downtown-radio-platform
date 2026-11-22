@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Artist Portal & Creator Incubation Terminal',
+  title: 'Artist Portal & Distribution — Downtown Radio',
   description:
-    'Upload uncompressed master audio (WAV), track real-time fan tips in Naira with 100% payout, submit festival performance pitches for upcoming showcases (Royal Rave), and distribute worldwide to 20+ DSPs.',
+    'Upload uncompressed master audio (WAV), track real-time fan tips in Naira with 100% payout, submit festival performance pitches for upcoming showcases (Status: TBE), and distribute worldwide to 20+ DSPs.',
   alternates: {
     canonical: '/artist-dashboard',
   },
   openGraph: {
-    title: 'Artist Portal & Creator Sanctuary — Downtown Radio',
+    title: 'Artist Portal & Distribution — Downtown Radio',
     description:
       'Direct fan tipping in Nigerian Naira, 100% master ownership retention, and global digital distribution to Spotify, Apple, and Boomplay.',
     url: '/artist-dashboard',

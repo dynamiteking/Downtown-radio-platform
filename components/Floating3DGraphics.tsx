@@ -90,19 +90,20 @@ export default function Floating3DGraphics() {
         <div className="flex items-center gap-2">
           {/* Pulsing Radar Ring Anchor */}
           <div className="relative w-4 h-4 flex items-center justify-center">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-emerald-400 animate-pulse' : 'bg-gold-500'}`} />
             <span className="absolute w-6 h-6 rounded-full border border-emerald-400/40 animate-radar-ping" />
             <span className="absolute w-10 h-10 rounded-full border border-gold-500/20 animate-radar-ping" style={{ animationDelay: '2.5s' }} />
           </div>
-          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-gold-400">
-            TRANSMISSION ACTIVE // 101.4 FM WAT
+          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-gold-400 flex items-center gap-1.5">
+            {isPlaying && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />}
+            <span>{isPlaying ? 'LIVE / PLAYING • 101.4 FM WAT' : 'READY TO STREAM • 101.4 FM WAT'}</span>
           </span>
         </div>
-        <div className="text-[9px] font-mono text-zinc-500 tracking-wider">
-          BROADCAST REGION: NIGERIA (WEST AFRICA // 101.4 FM)
+        <div className="text-[9px] font-mono text-zinc-400 tracking-wider">
+          Broadcasting Node: Ile-Ife & Lagos • 101.4 FM WAT
         </div>
-        <div className="text-[8px] font-mono text-zinc-600">
-          PCM LOSSLESS CARRIER • 24-BIT / 96KHZ • {isPlaying ? 'STREAM: LIVE BROADCAST' : 'STREAM: STANDBY'}
+        <div className="text-[8px] font-mono text-zinc-500">
+          PCM LOSSLESS CARRIER • 24-BIT / 96KHZ • {isPlaying ? 'LIVE / PLAYING • 101.4 FM WAT' : 'READY TO STREAM • 101.4 FM WAT'}
         </div>
       </div>
 

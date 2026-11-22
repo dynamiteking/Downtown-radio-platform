@@ -1,18 +1,18 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Events & Live Activations — Royal Rave Showcase (Status: TBA)',
+  title: 'Events & Live Showcases (TBE) — Downtown Radio',
   description:
-    'Explore upcoming live activations, rooftop showcases, and festival pitching from Downtown Radio. Royal Rave Showcase status: To Be Announced (TBA). Pitch your unreleased tracks for open headliner slots.',
+    'Upcoming festival showcases, stage pitching, and crowd archives from Downtown Radio. All upcoming event dates, locations, and flyers are currently TBE (To Be Announced).',
   alternates: {
     canonical: '/events',
   },
   openGraph: {
-    title: 'Events & Live Activations — Downtown Radio (Royal Rave Status: TBA)',
+    title: 'Events & Live Showcases (TBE) — Downtown Radio',
     description:
-      'Live activations and festival pitching from Downtown Radio. Royal Rave Showcase status: To Be Announced (TBA). Join the notification waitlist and pitch unreleased masters.',
+      'Live showcases, stage pitching, and crowd archives from Downtown Radio. Upcoming event dates, locations, and flyers are currently TBE.',
     url: '/events',
-    images: ['/images/royal-rave-poster-updated.jpg'],
+    images: ['/images/downtown-radio-logo.jpg'],
   },
 };
 

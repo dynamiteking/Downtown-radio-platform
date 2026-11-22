@@ -51,13 +51,17 @@ export interface EventItem {
   city: string;
   capacity: string;
   bannerUrl: string;
-  status: 'Open for Pitching' | 'Reviewing' | 'Sold Out' | 'Upcoming' | 'To Be Announced (TBA)';
+  flyerUrl?: string | null;
+  flyerStatus?: string;
+  isVerified?: boolean;
+  status: 'Open for Pitching' | 'Reviewing' | 'Sold Out' | 'Upcoming' | 'To Be Announced (TBA)' | 'tbe' | 'verified';
   pitchDeadline: string;
   slotsAvailable: number;
   description: string;
   perks: string[];
   headliners?: string[];
   vibe: string;
+  ticketUrl?: string;
 }
 
 export interface PitchSubmission {

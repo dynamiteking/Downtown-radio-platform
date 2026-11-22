@@ -77,36 +77,194 @@ export default function ArtistDashboardPage() {
             className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-charcoal-950 bg-gold-gradient shadow-gold-glow flex items-center gap-1.5 active:scale-95 transition-transform"
           >
             <UploadCloud className="w-3.5 h-3.5 text-charcoal-950" />
-            <span>Upload Master (WAV)</span>
-          </button>
-
-          <button
-            onClick={() => setDistributionModalOpen(true)}
-            className="px-3 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-charcoal-800 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-1.5"
-          >
-            <Share2 className="w-3.5 h-3.5 text-gold-400" />
-            <span>Distribute Track</span>
+            <span>Upload & Earn (Free)</span>
           </button>
 
           {events[0] && (
             <button
               onClick={() => openPitchModal(events[0])}
-              className="px-3 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-charcoal-800 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-1.5"
+              className="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-charcoal-800 border border-white/10 hover:border-gold-500/30 transition-all flex items-center gap-1.5"
             >
               <Calendar className="w-3.5 h-3.5 text-amber-400" />
-              <span>Pitch Showcase Stage</span>
+              <span>Pitch Live Shows (TBE)</span>
             </button>
           )}
 
           <button
-            onClick={() => setOpenLetterOpen(true)}
-            className="px-3 py-1.5 rounded-xl text-xs font-semibold text-amber-400 hover:text-white bg-charcoal-800/80 border border-amber-500/30 transition-all flex items-center gap-1.5"
+            onClick={() => setProModalOpen(true)}
+            className="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-amber-400 hover:text-white bg-charcoal-800/80 border border-amber-500/30 transition-all flex items-center gap-1.5"
           >
-            <Mail className="w-3.5 h-3.5 text-amber-400" />
+            <Crown className="w-3.5 h-3.5 text-gold-400" />
+            <span>Downtown Pro (₦5,000/mo)</span>
+          </button>
+
+          <button
+            onClick={() => setOpenLetterOpen(true)}
+            className="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-zinc-400 hover:text-white bg-charcoal-800/80 border border-white/10 transition-all flex items-center gap-1.5"
+          >
+            <Mail className="w-3.5 h-3.5 text-gold-400" />
             <span>Manifesto</span>
           </button>
         </div>
       </div>
+
+      {/* 3-CARD ONBOARDING FLOW: Free Upload & Earn, Pitch Live Shows (TBE), Downtown Pro */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        {/* Card 1: Upload & Earn (Free) */}
+        <div className="rounded-3xl p-6 bg-gradient-to-b from-charcoal-850 to-charcoal-900 border-2 border-gold-500/30 hover:border-gold-500/70 transition-all duration-300 flex flex-col justify-between shadow-xl">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="w-11 h-11 rounded-2xl bg-gold-500/15 border border-gold-500/30 text-gold-400 flex items-center justify-center">
+                <UploadCloud className="w-6 h-6" />
+              </div>
+              <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                FREE TO JOIN
+              </span>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-black text-white tracking-tight">1. Upload & Earn</h3>
+              <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
+                Create your artist profile, upload lossless masters, and receive instant direct Naira fan tips.
+              </p>
+            </div>
+
+            <ul className="space-y-2 text-xs text-zinc-300 pt-2 border-t border-white/5">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Create artist identity & profile</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Upload master audio (WAV / MP3)</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Receive Naira (₦) tips to your bank</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Keep 100% master & publishing rights</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="pt-6">
+            <button
+              onClick={() => setOnboardingModalOpen(true)}
+              className="w-full py-3.5 rounded-2xl font-black text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center justify-center gap-2"
+            >
+              <UploadCloud className="w-4 h-4 text-charcoal-950" />
+              <span>Upload Tracks & Earn (Free)</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Card 2: Pitch for Live Shows (TBE) */}
+        <div className="rounded-3xl p-6 bg-gradient-to-b from-charcoal-850 to-charcoal-900 border-2 border-amber-500/30 hover:border-amber-400/70 transition-all duration-300 flex flex-col justify-between shadow-xl">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="w-11 h-11 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-300 flex items-center justify-center">
+                <Calendar className="w-6 h-6" />
+              </div>
+              <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                STATUS: TBE
+              </span>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-black text-white tracking-tight">2. Pitch for Live Shows</h3>
+              <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
+                Structured submission for upcoming live showcases. Note: Event dates, locations, and flyers are currently TBE (no flyers displayed until verified).
+              </p>
+            </div>
+
+            <ul className="space-y-2 text-xs text-zinc-300 pt-2 border-t border-white/5">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span>Stage Name & Preferred City</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span>EPK / Live performance set link</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span>Instagram / TikTok & WhatsApp handle</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span>All upcoming festival dates/locations: TBE</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="pt-6">
+            <button
+              onClick={() => events[0] && openPitchModal(events[0])}
+              className="w-full py-3.5 rounded-2xl font-bold text-xs text-white bg-charcoal-800 hover:bg-charcoal-700 border border-amber-500/40 hover:border-amber-400 transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              <Calendar className="w-4 h-4 text-amber-400" />
+              <span>Pitch Showcase Stage (TBE)</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Card 3: Downtown Pro (₦5,000/mo) */}
+        <div className="rounded-3xl p-6 bg-gradient-to-b from-charcoal-850 to-charcoal-900 border-2 border-gold-500/40 hover:border-gold-400 transition-all duration-300 flex flex-col justify-between shadow-gold-glow">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="w-11 h-11 rounded-2xl bg-gold-500/20 border border-gold-500/40 text-gold-300 flex items-center justify-center">
+                <Crown className="w-6 h-6" />
+              </div>
+              <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-gold-500 text-charcoal-950">
+                PRO TIER
+              </span>
+            </div>
+
+            <div>
+              <div className="flex items-baseline gap-1">
+                <h3 className="text-xl font-black text-white tracking-tight">3. Downtown Pro</h3>
+                <span className="text-sm font-bold text-gold-400">₦5,000/mo</span>
+              </div>
+              <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
+                Unlock global DSP digital delivery to 20+ streaming platforms and keep 100% tips with zero fee deductions.
+              </p>
+            </div>
+
+            <ul className="space-y-2 text-xs text-zinc-300 pt-2 border-t border-white/5">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Global DSP distribution (Spotify, Apple, 17+ others)</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Automated royalty splits for collaborators</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>Priority editorial playlisting consideration</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+                <span>100% tip payout fee waiver</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="pt-6">
+            <button
+              onClick={() => setProModalOpen(true)}
+              className="w-full py-3.5 rounded-2xl font-black text-xs text-charcoal-950 bg-gold-gradient shadow-gold-glow hover:shadow-gold-glow-lg transition-transform active:scale-95 flex items-center justify-center gap-2"
+            >
+              <Crown className="w-4 h-4 text-charcoal-950" />
+              <span>Upgrade to Pro (₦5,000/mo)</span>
+            </button>
+          </div>
+        </div>
+
+      </section>
 
       {/* Creator Fast Navigation Anchor Dock */}
       <div className="sticky top-20 z-30 flex items-center gap-2 overflow-x-auto p-1.5 rounded-2xl bg-charcoal-900/90 backdrop-blur-xl border border-white/10 shadow-lg no-scrollbar">

@@ -28,13 +28,13 @@ interface GalleryItem {
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'gallery-4',
-    image: '/images/gallery/downtown-event-4-artist-performer.jpg',
-    title: 'Traditional Cowrie & Alté Royalty',
-    tag: 'Live Heritage Performance',
-    location: 'Rooftop Skate Bowl • Ile-Ife',
-    date: 'Acoustic Jam Session',
-    description: 'Pan-African sonic sovereignty in motion — blending hand-woven cowrie pearl regalia with soulful indie afro-fusion vocals.',
+    id: 'gallery-1',
+    image: '/images/gallery/downtown-event-1-fans.jpg',
+    title: 'Community & Brand Champions',
+    tag: 'Palm Afrika × Downtown Fest',
+    location: 'Official Festival Grounds',
+    date: 'Showcase Gathering',
+    description: 'Real fans celebrating music freedom with brand partner giveaways and the official Downtown Fest medallion.',
   },
   {
     id: 'gallery-2',
@@ -50,18 +50,18 @@ const GALLERY_ITEMS: GalleryItem[] = [
     image: '/images/gallery/downtown-event-3-creators.jpg',
     title: 'Sonic Architects & Creators',
     tag: 'Backstage & VIP Deck',
-    location: 'Ikeja Creative Loft',
+    location: 'Downtown Sound Labs',
     date: 'Underground Soundclash',
     description: 'Independent producers, stylists, and alté visionaries connecting in warm neon lighting over raw master recordings.',
   },
   {
-    id: 'gallery-1',
-    image: '/images/gallery/downtown-event-1-fans.jpg',
-    title: 'Community & Brand Champions',
-    tag: 'Palm Afrika × Downtown Fest',
-    location: 'Official Festival Grounds',
-    date: 'Annual Gathering',
-    description: 'Real fans celebrating music freedom with brand partner giveaways and the official Downtown Fest medallion.',
+    id: 'gallery-4',
+    image: '/images/gallery/downtown-event-4-artist-performer.jpg',
+    title: 'Traditional Cowrie & Alté Royalty',
+    tag: 'Live Heritage Performance',
+    location: 'Downtown Live Stage',
+    date: 'Acoustic Jam Session',
+    description: 'Pan-African sonic sovereignty in motion — blending hand-woven cowrie pearl regalia with soulful indie afro-fusion vocals.',
   },
   {
     id: 'gallery-5',
@@ -69,7 +69,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: 'All-Night Soundstage & Jam',
     tag: 'Rooftop Afterparty',
     location: 'Downtown Sound System',
-    date: '9PM — 5AM Session',
+    date: 'Late Night Session',
     description: 'Intimate late-night vibes where indie recording artists and loyal listeners celebrate authentic sonic expression.',
   },
 ];
@@ -139,7 +139,7 @@ export default function EventGallery() {
           <img
             src={GALLERY_ITEMS[0].image}
             alt={GALLERY_ITEMS[0].title}
-            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-transparent" />
           

@@ -48,12 +48,12 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'MusicEvent',
     '@id': `${baseUrl}/events#royal-rave`,
-    name: 'Royal Rave Festival (Downtown Radio Showcase)',
+    name: 'Royal Rave Festival (Downtown Radio Showcase — Status: TBE)',
     eventStatus: 'https://schema.org/EventPostponed',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
       '@type': 'Place',
-      name: 'To Be Announced (TBA)',
+      name: 'To Be Announced (TBE)',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Nigeria',
@@ -61,11 +61,10 @@ export default function StructuredData() {
       },
     },
     image: [
-      `${baseUrl}/images/royal-rave-poster-updated.jpg`,
-      `${baseUrl}/images/royal-rave-poster.jpg`,
+      `${baseUrl}/images/downtown-radio-logo.jpg`,
     ],
     description:
-      'The premier West African underground festival experience featuring all-night bass sound, intimate palace lights, and live indie headliners. 9:00 PM — 5:00 AM WAT.',
+      'Live showcase and festival experience from Downtown Radio. Dates, locations, and flyers are currently TBE (To Be Announced).',
     organizer: {
       '@type': 'Organization',
       name: 'Downtown Radio',
@@ -186,7 +185,7 @@ export default function StructuredData() {
         name: 'When and where is the Royal Rave Showcase?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Royal Rave Showcase date and venue are To Be Announced (TBA). Registration for early priority notice and performance slot pitching is open on the platform.',
+          text: 'Upcoming showcase dates and locations are To Be Announced (TBE). Registration for early priority notice and performance slot pitching is open on the platform.',
         },
       },
       {
