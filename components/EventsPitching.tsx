@@ -97,10 +97,12 @@ export default function EventsPitching() {
 
                 {/* Venue & City overlay */}
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex items-center gap-2 text-xs font-bold text-gold-400 mb-1">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>{event.venue} • {event.city}</span>
-                  </div>
+                  {event.id !== 'event-1' && event.venue && event.venue !== 'To Be Announced (TBA)' && (
+                    <div className="flex items-center gap-2 text-xs font-bold text-gold-400 mb-1">
+                      <MapPin className="w-3.5 h-3.5" />
+                      <span>{event.venue}{event.city ? ` • ${event.city}` : ''}</span>
+                    </div>
+                  )}
                   <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
                     {event.title}
                   </h3>

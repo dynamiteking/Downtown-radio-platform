@@ -118,7 +118,7 @@ export default function TicketBookingSection() {
     setIsProcessing(true);
     setTimeout(() => {
       setIsProcessing(false);
-      const ticketId = `RR-IFE-${Math.floor(100000 + Math.random() * 900000)}`;
+      const ticketId = `RR-PASS-${Math.floor(100000 + Math.random() * 900000)}`;
       setBookedTicket({
         ticketId,
         tier: selectedTier,
@@ -158,7 +158,7 @@ export default function TicketBookingSection() {
           Royal Rave Festival
         </h2>
         <p className="text-sm sm:text-base text-zinc-300 mt-2">
-          Status: To Be Announced (TBA) • Date & Venue TBA • Priority Pass & Early Notification
+          Status: To Be Announced (TBA) • Priority Pass & Early Notification
         </p>
       </div>
 
@@ -199,14 +199,6 @@ export default function TicketBookingSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-2 text-xs text-zinc-300">
-                <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-white block font-bold">Venue: To Be Announced (TBA)</strong>
-                  <span className="text-zinc-400">Nigeria • Official Venue Update Coming Soon</span>
-                </div>
-              </div>
-
               {/* Status Update Card */}
               <div className="pt-3 border-t border-white/5 space-y-2">
                 <div className="flex items-center justify-between text-xs font-mono">
@@ -216,7 +208,7 @@ export default function TicketBookingSection() {
                   </span>
                 </div>
                 <p className="text-[11px] text-zinc-400 leading-relaxed">
-                  We are no longer hosting Royal Rave at previous locations. The official flyer is locked in and new venue & date details will be published here first.
+                  We are no longer hosting Royal Rave. The official flyer is locked in and future updates will be announced directly on this page.
                 </p>
               </div>
 
@@ -286,8 +278,8 @@ export default function TicketBookingSection() {
                     <strong className="text-zinc-200">To Be Announced (TBA)</strong>
                   </div>
                   <div>
-                    <span className="text-zinc-500 block text-[10px] uppercase font-mono">Location</span>
-                    <strong className="text-zinc-200">To Be Announced (TBA)</strong>
+                    <span className="text-zinc-500 block text-[10px] uppercase font-mono">Event Status</span>
+                    <strong className="text-gold-400">To Be Announced (TBA)</strong>
                   </div>
                 </div>
               </div>

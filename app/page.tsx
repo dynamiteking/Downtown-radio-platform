@@ -39,7 +39,7 @@ export default function PortalGateway() {
       id: 'artists',
       number: 'PORTAL 01 // CREATOR SANCTUARY',
       title: 'FOR ARTISTS & CREATORS',
-      subtitle: 'Upload tracks, submit performance pitches for Ile-Ife/Lagos, manage tips, and grow your audience.',
+      subtitle: 'Upload tracks, submit live performance pitches, manage tips, and grow your audience.',
       badge: 'CREATOR HUB • 100% OWNERSHIP',
       icon: <Mic2 className="w-7 h-7 text-gold-400" />,
       actionText: 'Enter Artist Portal',
@@ -135,7 +135,7 @@ export default function PortalGateway() {
         <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-charcoal-850 border border-gold-500/30 text-[11px] font-mono uppercase tracking-widest text-zinc-300 shadow-md">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-gold-400 font-bold">BROADCASTING NODE:</span>
-          <span>Lagos & Ile-Ife • 101.4 FM WAT</span>
+          <span>Lagos, Nigeria • 101.4 FM WAT</span>
         </div>
 
         {/* Master Headline */}

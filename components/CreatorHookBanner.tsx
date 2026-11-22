@@ -182,7 +182,7 @@ export default function CreatorHookBanner() {
               {/* Station Tag Overlay */}
               <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-charcoal-950/80 backdrop-blur-md text-[10px] font-bold text-gold-300 border border-gold-500/30 flex items-center gap-1.5 shadow-md">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Downtown 101.4 FM • Ife</span>
+                <span>Downtown 101.4 FM WAT • On Air</span>
               </div>
             </div>
 

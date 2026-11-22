@@ -28,7 +28,7 @@ export default function StructuredData() {
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Downtown Radio Sound Labs & Broadcast Hub',
-      addressLocality: 'Lagos & Ile-Ife',
+      addressLocality: 'Lagos',
       addressRegion: 'Nigeria',
       addressCountry: 'NG',
     },
@@ -170,7 +170,7 @@ export default function StructuredData() {
         name: 'What is Downtown Radio?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Downtown Radio (101.4 FM WAT) is an end-to-end entertainment grooming sanctuary, digital music ecosystem, and live event organizer headquartered in Ile-Ife and Lagos, Nigeria. It combines uncompressed lossless web streaming, direct fan tipping in Naira, global digital distribution to 20+ DSPs, and curated palace gatherings like the Royal Rave Festival.',
+          text: 'Downtown Radio (101.4 FM WAT) is an end-to-end entertainment grooming sanctuary, digital music ecosystem, and live event organizer headquartered in Lagos, Nigeria. It combines uncompressed lossless web streaming, direct fan tipping in Naira, global digital distribution to 20+ DSPs, and curated live gatherings like the Royal Rave Festival.',
         },
       },
       {

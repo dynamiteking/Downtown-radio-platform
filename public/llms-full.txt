@@ -1,7 +1,7 @@
 # Downtown Radio — Comprehensive Knowledge Base & Technical Ecosystem Specification
 
 ## 1. Executive Summary & Brand Identity
-Downtown Radio is a premier West African entertainment grooming sanctuary, broadcast network, and fintech-enabled music distribution platform. Founded and led by CEO DK, the platform operates from core hubs across Lagos and Ile-Ife, Nigeria, broadcasting on 101.4 FM WAT and globally via uncompressed web stream at https://downtownradio.live.
+Downtown Radio is a premier West African entertainment grooming sanctuary, broadcast network, and fintech-enabled music distribution platform. Founded and led by CEO DK, the platform operates from its broadcast hub in Lagos, Nigeria, broadcasting on 101.4 FM WAT and globally via uncompressed web stream at https://downtownradio.live.
 
 The mission of Downtown Radio is to solve the economic and distribution bottlenecks faced by independent African musicians. By pairing direct Naira fan tipping with lossless web streaming, live festival showcases (the Royal Rave Showcase), global DSP delivery (to Spotify, Apple Music, Audiomack, Boomplay, and 16 other networks), and holistic stage grooming, Downtown Radio enables creators to achieve financial sovereignty from day one.
 
@@ -15,7 +15,6 @@ The mission of Downtown Radio is to solve the economic and distribution bottlene
 ## 3. Signature Gathering: Royal Rave Showcase
 - **Event Name**: Royal Rave Showcase
 - **Status**: To Be Announced (TBA)
-- **Venue & Location**: To Be Announced (TBA) • Nigeria
 - **Atmosphere**: Signature bass sound systems, curated crowd, and high-energy live band performances.
 - **Priority Pass Registration**: Open on platform with early notification alerts for venue and date announcement.
 - **Performance Pitching**: Slots reserved for emerging independent acts. Selected acts receive soundcheck evaluation, live multi-track audio mastering, and 4K concert video footage.
@@ -63,7 +62,7 @@ Downtown Radio distributes lossless 24-bit/48kHz master audio to 20 verified str
 ## 7. Frequently Asked Questions (FAQ)
 
 ### What is Downtown Radio?
-Downtown Radio is a premier West African entertainment grooming ecosystem, digital audio streaming platform, and live event organizer based in Ile-Ife and Lagos, Nigeria. It provides independent African creators with direct fan tipping in Naira, global music distribution, and festival performance stages.
+Downtown Radio is a premier West African entertainment grooming ecosystem, digital audio streaming platform, and live event organizer based in Lagos, Nigeria. It provides independent African creators with direct fan tipping in Naira, global music distribution, and festival performance stages.
 
 ### How does tipping work on Downtown Radio?
 Listeners and fans can tip any featured artist directly in Nigerian Naira (₦) with instant bank transfer, USSD, debit cards, or Apple Pay. On the Downtown Pro plan, 100% of the fan's gift reaches the artist's local bank account with zero platform fees.
@@ -71,8 +70,8 @@ Listeners and fans can tip any featured artist directly in Nigerian Naira (₦) 
 ### Who is DK in relation to Downtown Radio?
 DK is the CEO, Pioneer, and Creative Director of Downtown Radio. He is an executive, event host, and visionary who is also releasing a major collaborative debut EP titled "ATWN" (After This, What Next?) alongside Nirati Dagwi in 2026.
 
-### When and where is the Royal Rave Festival?
-The Royal Rave Showcase date and venue are To Be Announced (TBA). Independent creators and fans can register for early priority notifications and pitch performance slots on the platform.
+### When is the Royal Rave Festival?
+The Royal Rave Showcase status is To Be Announced (TBA). Independent creators and fans can register for early priority notifications and pitch performance slots on the platform.
 
 ### Can independent artists pitch to perform at Downtown Radio events?
 Yes. Independent creators can pitch their tracks via the Artist Portal at https://downtownradio.live/artist-dashboard or the Events page at https://downtownradio.live/events. 4 performance slots are available for the Royal Rave Festival.

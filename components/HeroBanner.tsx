@@ -34,14 +34,14 @@ export default function HeroBanner() {
       badgeIcon: <Flame className="w-3.5 h-3.5 text-gold-400" />,
       title: 'Royal Rave Festival',
       artist: 'Official Flyer • Status: To Be Announced (TBA)',
-      subtitle: 'The all-night indie & alté celebration. Signature sound systems, electric DJ sets, and intimate performances from dusk to dawn. Date and venue are To Be Announced (TBA).',
+      subtitle: 'The all-night indie & alté celebration. Signature sound systems, electric DJ sets, and intimate performances from dusk to dawn. Status is To Be Announced (TBA).',
       image: '/images/royal-rave-poster.jpg',
       tag: 'Status: To Be Announced (TBA)',
       posterThumb: '/images/royal-rave-poster.jpg',
       stats: [
         { label: 'Status', value: 'TBA' },
         { label: 'Date', value: 'TBA' },
-        { label: 'Venue', value: 'TBA' },
+        { label: 'Slots', value: '4 Open Slots' },
       ],
       actionType: 'event',
       event: featuredEvent,
@@ -263,7 +263,7 @@ export default function HeroBanner() {
               STATUS: TO BE ANNOUNCED (TBA)
             </span>
             <span className="text-[9px] text-zinc-400">
-              Date & Venue TBA • Official Flyer
+              Official Flyer • Status: TBA
             </span>
           </div>
         </div>
